@@ -30,7 +30,8 @@
         "@pages/*": ["pages/*"],
         "@public/*": ["public/*"],
         "@styles/*": ["styles/*"],
-        "@api/*": ["pages/api/*"]
+        "@api/*": ["pages/api/*"],
+        "@lib/*": ["lib/*"]
     }
   },
   "include": [
