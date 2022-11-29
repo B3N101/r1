@@ -1,38 +1,38 @@
 // q: how do i run seed script
 // a: npx ts-node site/prisma/seed.ts
-import { PrismaClient } from '@prisma/client'
+import { PrismaClient } from "@prisma/client";
 
-const prisma = new PrismaClient()
+const prisma = new PrismaClient();
 
 async function main() {
-    await prisma.user.create({
-      data: {
-        name: 'Alice',
-        email: 'alice@prisma.io',
-        posts: {
-          create: { title: 'Hello World' },
-        },
-        profile: {
-          create: { bio: 'I like turtles' },
-        },
+  await prisma.user.create({
+    data: {
+      name: "Alice",
+      email: "alice@prisma.io",
+      posts: {
+        create: { title: "Hello World" },
       },
-    })
-  
-    const allUsers = await prisma.user.findMany({
-      include: {
-        posts: true,
-        profile: true,
+      profile: {
+        create: { bio: "I like turtles" },
       },
-    })
-    console.dir(allUsers, { depth: null })
+    },
+  });
+
+  const allUsers = await prisma.user.findMany({
+    include: {
+      posts: true,
+      profile: true,
+    },
+  });
+  console.dir(allUsers, { depth: null });
 }
 
 main()
   .then(async () => {
-    await prisma.$disconnect()
+    await prisma.$disconnect();
   })
   .catch(async (e) => {
-    console.error(e)
-    await prisma.$disconnect()
-    process.exit(1)
-  })
+    console.error(e);
+    await prisma.$disconnect();
+    process.exit(1);
+  });
