@@ -10,6 +10,8 @@
     "seed": "node prisma/seed.js"
   },
   "dependencies": {
+    "@ckeditor/ckeditor5-build-classic": "^35.3.2",
+    "@ckeditor/ckeditor5-react": "^5.0.3",
     "@next/font": "^13.0.4",
     "@prisma/client": "^4.6.1",
     "@types/react": "18.0.25",

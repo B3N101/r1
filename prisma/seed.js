@@ -1,7 +1,8 @@
 // q: how do i run seed script
 // a: npx ts-node site/prisma/seed.ts
-import { PrismaClient } from "@prisma/client";
 
+
+const { PrismaClient } = require('@prisma/client')
 const prisma = new PrismaClient();
 
 async function main() {
