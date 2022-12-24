@@ -1,26 +1,38 @@
 "use client";
-import Toggle from "@app/components/Toggle";
-import { Inter } from "@next/font/google";
-import Counter from "./components/counter";
-import Navbar from "./components/Navbar";
-import { ThemeProvider } from "next-themes";
 
-// If loading a variable font, you don't need to specify the font weight
-const inter = Inter({ subsets: ["latin"] });
+import "./globals.css";
+import { ThemeProvider } from "next-themes";
+import { useTheme } from "next-themes";
+
+import localFont from "@next/font/local";
+import { Inter } from "@next/font/google";
+import { Merriweather } from "@next/font/google";
+
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+
+const chomsky = localFont({
+	src: "/fonts/Chomsky.woff2",
+	variable: "--font-chomsky",
+});
+const inter = Inter({
+	subsets: ["latin"],
+	variable: "--font-inter",
+});
 
 export default function RootLayout({
-  children,
+	children,
 }: {
-  children: React.ReactNode;
+	children: React.ReactNode;
 }) {
-  return (
+	return (
     <html lang="en" className={inter.className}>
       <head />
-      <body className="bg-white dark:bg-neutral-700">
+      <body className="bg-white dark:bg-neutral-700 flex h-screen flex-col justify-between">
         <ThemeProvider attribute="class">
           <Navbar />
-          <Counter />
           {children}
+          <Footer />
         </ThemeProvider>
       </body>
     </html>

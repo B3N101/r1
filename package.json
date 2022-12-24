@@ -12,21 +12,22 @@
   "dependencies": {
     "@ckeditor/ckeditor5-build-classic": "^35.3.2",
     "@ckeditor/ckeditor5-react": "^5.0.3",
+    "@heroicons/react": "^2.0.13",
     "@next/font": "^13.0.4",
     "@prisma/client": "^4.6.1",
     "@types/react": "18.0.25",
     "@types/react-dom": "18.0.9",
     "classnames": "^2.3.2",
     "eslint": "8.28.0",
-    "next": "13.0.4",
+    "next": "^13.1.0",
     "next-themes": "^0.2.1",
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@types/node": "^18.11.9",
     "autoprefixer": "^10.4.13",
-    "eslint-config-next": "^13.0.5",
+    "eslint-config-next": "^13.1.0",
     "postcss": "^8.4.19",
     "prettier": "2.8.0",
     "prisma": "^4.6.1",
