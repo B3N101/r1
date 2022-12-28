@@ -2,12 +2,17 @@
 
 import { useState } from "react";
 import { useTheme } from "next-themes";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 
 import Logo from "@public/anvil.svg";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
+import {
+	Bars3Icon,
+	XMarkIcon,
+	MagnifyingGlassIcon,
+} from "@heroicons/react/24/solid";
 
 import ThemeSwitch from "./icons/ThemeSwitch";
 
@@ -20,17 +25,30 @@ export default function Navbar() {
 	function toggleDropdown() {
 		changeDropdown(!dropdownState);
 	}
+	// router
+	const router = useRouter();
+	const pathName = usePathname();
 
 	//281,101
 	return (
-		<header className="border-b-4 border-mxRed flex items-center justify-between py-10">
-			<nav className="bg-white dark:bg-mxDark flex justify-center">
+		<header className="border-b-4 border-mxRed flex items-center justify-between py-4">
+			<nav className="flex justify-center gap-8">
 				{/* Logo */}
-				<Image src={Logo} alt="logo" width={291} height={101} />
+				<button
+					className="ml-4 sm:ml-8"
+					onClick={() => {
+						if (pathName != "/") {
+							router.push("/");
+						}
+					}}
+				>
+					<Image src={Logo} alt="logo" width={291} height={101} />
+				</button>
 
 				{/* Theme Switch */}
-				<ThemeSwitch />
-
+				<div className="m-4">
+					<ThemeSwitch />
+				</div>
 				{/* Desktop */}
 				<div className="hidden sm:block">
 					<div className="flex flex-grow justify-end">
@@ -46,28 +64,31 @@ export default function Navbar() {
 				</div>
 
 				{/* Mobile */}
-				<div className="block sm:hidden">
+				<button
+					aria-label="Toggle Search Menu"
+					type="button"
+					className="ml-1 mr-1 h-8 w-8 rounded p-1 sm:ml-4"
+				>
+					<MagnifyingGlassIcon className="h-6 w-6 block sm:hidden" />
+				</button>
 
+				<div className="block sm:hidden">
 					{/* Hamburger */}
-					<div className="flex flex-grow justify-end">
-						<button
-							className="flex items-center px-3 py-2 border rounded text-mxRed dark:text-mxRed border-mxRed dark:border-mxRed hover:text-white hover:border-white"
-							onClick={toggleDropdown}
-						>
-							{dropdownState ? (
-								<XMarkIcon className="h-6 w-6" />
-							) : (
-								<Bars3Icon className="h-6 w-6" />
-							)}
-						</button>
-					</div>
+					<button
+						aria-label="Toggle Dark Mode"
+						type="button"
+						className="ml-1 mr-1 h-8 w-8 rounded p-1 sm:ml-4"
+						onClick={toggleDropdown}
+					>
+						{dropdownState ? (
+							<XMarkIcon className="h-6 w-6" />
+						) : (
+							<Bars3Icon className="h-6 w-6" />
+						)}
+					</button>
 
 					{/* Dropdown */}
-					<div
-						className={`${
-							dropdownState ? "block" : "hidden"
-						} sm:hidden`}
-					>
+					<div className={`${dropdownState ? "block" : "hidden"} sm:hidden`}>
 						<div className="flex flex-grow justify-end">
 							<ul className="flex flex-col items-center">
 								<li className="mr-6">

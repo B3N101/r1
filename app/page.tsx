@@ -1,15 +1,114 @@
-import Head from "next/head";
-import Image from "next/image";
+import text from "./components/text/text";
+import italic from "./components/text/italic";
+import { Crimson_Pro } from "@next/font/google";
+const crimsonPro = Crimson_Pro({ subsets: ["latin"] });
+
 
 export default function Page() {
   return (
-	<div className="container mx-auto p-11 my-64">
-
-			<h1 className="text-3xl font-bold underline">
-				Hello, Next.js!
-			</h1>
-
-	</div>
+		<div className="container mx-auto mb-22 pt-3">
+			<text className={crimsonPro.className}>
+				<h1 className="text-3xl font-bold underline">Hello, Next.js!</h1>
+			</text>
+			<text>
+				<p className="text-xl">
+					This is a test of the emergency broadcast system. This is a test of
+					the emergency broadcast system. This is a test of the emergency
+					broadcast system. This is a test of the emergency broadcast system.
+				</p>
+			</text>
+			<text>
+				<h1 className="text-3xl font-bold underline">Hello, Next.js!</h1>
+			</text>
+			<text>
+				<p className="text-xl">
+					This is a test of the emergency broadcast system. This is a test of
+					the emergency broadcast system. This is a test of the emergency
+					broadcast system. This is a test of the emergency broadcast system.
+				</p>
+			</text>
+			<text>
+				<h1 className="text-3xl font-bold underline">Hello, Next.js!</h1>
+			</text>
+			<text>
+				<p className="text-xl">
+					This is a test of the emergency broadcast system. This is a test of
+					the emergency broadcast system. This is a test of the emergency
+					broadcast system. This is a test of the emergency broadcast system.
+				</p>
+			</text>
+			<text>
+				<h1 className="text-3xl font-bold underline">Hello, Next.js!</h1>
+			</text>
+			<text>
+				<p className="text-xl">
+					This is a test of the emergency broadcast system. This is a test of
+					the emergency broadcast system. This is a test of the emergency
+					broadcast system. This is a test of the emergency broadcast system.
+				</p>
+			</text>
+			<text>
+				<p className="text-xl">
+					This is a test of the emergency broadcast system. This is a test of
+					the emergency broadcast system. This is a test of the emergency
+					broadcast system. This is a test of the emergency broadcast system.
+				</p>
+			</text>
+			<text>
+				<h1 className="text-3xl font-bold underline">Hello, Next.js!</h1>
+			</text>
+			<text>
+				<p className="text-xl">
+					This is a test of the emergency broadcast system. This is a test of
+					the emergency broadcast system. This is a test of the emergency
+					broadcast system. This is a test of the emergency broadcast system.
+				</p>
+			</text>
+			<text>
+				<h1 className="text-3xl font-bold underline">Hello, Next.js!</h1>
+			</text>
+			<text>
+				<p className="text-xl">
+					This is a test of the emergency broadcast system. This is a test of
+					the emergency broadcast system. This is a test of the emergency
+					broadcast system. This is a test of the emergency broadcast system.
+				</p>
+			</text>
+			<text>
+				<p className="text-xl">
+					This is a test of the emergency broadcast system. This is a test of
+					the emergency broadcast system. This is a test of the emergency
+					broadcast system. This is a test of the emergency broadcast system.
+				</p>
+			</text>
+			<text>
+				<p className="text-xl">
+					This is a test of the emergency broadcast system. This is a test of
+					the emergency broadcast system. This is a test of the emergency
+					broadcast system. This is a test of the emergency broadcast system.
+				</p>
+			</text>
+			<text>
+				<h1 className="text-3xl font-bold underline">Hello, Next.js!</h1>
+			</text>
+			<text>
+				<p className="text-xl">
+					This is a test of the emergency broadcast system. This is a test of
+					the emergency broadcast system. This is a test of the emergency
+					broadcast system. This is a test of the emergency broadcast system.
+				</p>
+			</text>
+			<text>
+				<h1 className="text-3xl font-bold underline">Hello, Next.js!</h1>
+			</text>
+			<text>
+				<p className="text-xl">
+					This is a test of the emergency broadcast system. This is a test of
+					the emergency broadcast system. This is a test of the emergency
+					broadcast system. This is a test of the emergency broadcast system.
+				</p>
+			</text>
+		</div>
 	);
 }
 

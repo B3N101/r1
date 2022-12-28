@@ -10,6 +10,7 @@ import { Merriweather } from "@next/font/google";
 
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import Error from "./error";
 
 const chomsky = localFont({
 	src: "/fonts/Chomsky.woff2",
@@ -26,12 +27,14 @@ export default function RootLayout({
 	children: React.ReactNode;
 }) {
 	return (
-    <html lang="en" className={inter.className}>
+    <html lang="en" className={inter.className + 'h-screen'}>
       <head />
-      <body className="bg-white dark:bg-neutral-700 flex h-screen flex-col justify-between">
+      <body className="bg-white dark:bg-neutral-700 flex flex-col justify-between">
         <ThemeProvider attribute="class">
           <Navbar />
+          <main className="mb-auto">
           {children}
+          </main>
           <Footer />
         </ThemeProvider>
       </body>
