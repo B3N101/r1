@@ -28,6 +28,11 @@ export default function Navbar() {
 	// router
 	const router = useRouter();
 	const pathName = usePathname();
+	
+	function isDisabled() : boolean {
+		if (pathName == "/") return true;
+		return false;
+	}
 
 	//281,101
 	return (
@@ -36,6 +41,7 @@ export default function Navbar() {
 				{/* Logo */}
 				<button
 					className="ml-4 sm:ml-8"
+					disabled={isDisabled()}
 					onClick={() => {
 						if (pathName != "/") {
 							router.push("/");
