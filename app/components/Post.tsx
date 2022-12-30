@@ -15,7 +15,7 @@ type AppProps = {
 	date: Date;
 };
 
-enum Date {
+enum Month {
 	January,
 	February,
 	March,
@@ -62,7 +62,7 @@ export default function Post({
 					<h1>{title}</h1>
 					<h2>{subTitle}</h2>
 					<h2>
-						{Date[date.getMonth()] +
+						{Month[date.getMonth()] +
 							" " +
 							date.getDay() +
 							", " +

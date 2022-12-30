@@ -25,9 +25,9 @@ const ThemeSwitch = () => {
 			}
 		>
 			{mounted && (theme === "dark" || resolvedTheme === "dark") ? (
-				<Image src={sunlogo} width={24} height={24} className="h-6 w-6" />
+				<Image src={sunlogo} alt="sunicon" width={24} height={24} className="h-6 w-6" />
 			) : (
-				<Image src={moonlogo} width={24} height={24} className="h-6 w-6" />
+				<Image src={moonlogo} alt="moonicon" width={24} height={24} className="h-6 w-6" />
 			)}
 		</button>
 	);
