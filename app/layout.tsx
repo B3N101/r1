@@ -25,7 +25,7 @@ export default function RootLayout({
       <head />
       <body className="bg-white dark:bg-neutral-700 flex flex-col justify-between">
         <ThemeProvider attribute="class">
-          <div className="sticky z-10 top-0 saturate-200 backdrop-blur-2xl">
+          <div className="sticky z-10 top-0 saturate-200 backdrop-blur-xl">
             <Navbar />
           </div>
           <main className="mb-auto">

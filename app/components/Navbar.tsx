@@ -8,6 +8,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 import Logo from "@public/anvil.svg";
+
 import {
 	Bars3Icon,
 	XMarkIcon,
@@ -36,7 +37,7 @@ export default function Navbar() {
 
 	//281,101
 	return (
-		<header className="border-b-4 border-mxRed flex items-center justify-between py-4">
+		<header className="border-b-4 border-mxRed flex items-center justify-between py-4 bg-blend-screen">
 			<nav className="flex justify-center gap-8">
 				{/* Logo */}
 				<button
