@@ -3,38 +3,60 @@
 
 generator client {
   provider = "prisma-client-js"
-  previewFeatures = ["referentialIntegrity"]
+  //previewFeatures = ["referentialIntegrity"]
 }
 
 datasource db {
-  provider = "mysql"
-  url = env("DATABASE_URL")
+  provider     = "mysql"
+  url          = env("DATABASE_URL")
   relationMode = "prisma"
 }
 
-
 model Post {
-  id        Int      @id @default(autoincrement())
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-  title     String   @db.VarChar(255)
-  content   String?
-  published Boolean  @default(false)
-  author    User     @relation(fields: [authorId], references: [id])
-  authorId  Int
+  id           Int        @id @default(autoincrement())
+  title        String
+  subtitle     String
+  description  String
+  viewCount    Int        @default(value: 0)
+  image        String
+  imageCaption String
+  textContent  String
+  createdAt    DateTime   @default(now())
+  updatedAt    DateTime   @default(now())
+  categories   Category[]
+  comments     Comment[]
+  author       User       @relation(fields: [userId], references: [id])
+  userId       Int        @unique
 }
 
-model Profile {
-  id     Int     @id @default(autoincrement())
-  bio    String?
-  user   User    @relation(fields: [userId], references: [id])
-  userId Int     @unique
+model Category {
+  id    Int    @id @default(autoincrement())
+  name  String
+  posts Post[]
+}
+
+enum Authorization {
+  admin
+  user
 }
 
 model User {
-  id      Int      @id @default(autoincrement())
-  email   String   @unique
-  name    String?
-  posts   Post[]
-  profile Profile?
+  id            Int           @id @default(autoincrement())
+  username      String
+  email         String
+  password      String
+  authorization Authorization @default(value: user)
+  comments      Comment[]
+  posts         Post[]
+}
+
+model Comment {
+  id        Int      @id @default(autoincrement())
+  text      String
+  author    User     @relation(fields: [authorId], references: [id])
+  post      Post     @relation(fields: [postId], references: [id])
+  createdAt DateTime @default(now())
+  updatedAt DateTime @default(now())
+  authorId  Int      @unique
+  postId    Int      @unique
 }

@@ -49,7 +49,7 @@ export default function Navbar() {
 						}
 					}}
 				>
-					<Image src={Logo} alt="logo" width={291} height={101} />
+					<Image src={Logo} alt="logo" width={291} height={101}/>
 				</button>
 
 				{/* Theme Switch */}
