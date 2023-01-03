@@ -21,6 +21,8 @@ export default function Head() {
 			<meta name="twitter:card" content="summary_large_image" />
 			<meta name="twitter:site" content="@anvilnewspaper" />
 			<meta name="twitter:creator" content="@anvilnewspaper" />
+      <meta name="twitter:domain" content="mxanvil.vercel.app" />
+      <meta name="twitter:url" content="https://mxanvil.vercel.app" />
 			<meta name="twitter:title" content="The Middlesex Anvil" />
 			<meta
 				name="twitter:description"
