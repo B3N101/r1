@@ -45,6 +45,8 @@ export default function Head() {
 				name="google-site-verification"
 				content="Z912kU5-BcxuswGHKk5ELT1oWVa33Ejmr0PyAwKcK_c"
 			/>
+
+			{/* Fonts */}
 		</>
 	);
 }

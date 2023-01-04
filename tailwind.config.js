@@ -12,7 +12,12 @@ module.exports = {
 			mxDark: "#1f1f1f",
 			mxGray: "434344",
 		},
-		extend: {},
+		extend: {
+			fontFamily: {
+				'proxima-nova': ['proxima-nova', 'sans-serif'],
+				'crimson': ['crimson', 'sans']
+			},
+		},
 	},
 	plugins: [],
 };

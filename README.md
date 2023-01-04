@@ -78,3 +78,13 @@ npm i next@latest react@latest react-dom@latest eslint-config-next@latest
 - use osv to check for vulnerabilities
 - osv scanner from homebrew -> ```brew install osv-scanner```
 - ```osv-scanner package-lock.json```
+
+
+## GIT:
+- git status 
+- git commit -m "message"
+- git push origin
+- git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
+  - should use 
+    - alias git-log-styled="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'"
+    - put into .zshrc for macos

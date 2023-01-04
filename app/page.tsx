@@ -1,12 +1,22 @@
 import text from "./components/text/text";
 import italic from "./components/text/italic";
 import { Crimson_Pro } from "@next/font/google";
-const crimsonPro = Crimson_Pro({ subsets: ["latin"] });
+const crimsonPro = Crimson_Pro({
+	subsets: ["latin"],
+	variable: "--font-crimson",
+});
 
 
 export default function Page() {
   return (
 		<div className="container mx-auto mb-22 pt-3">
+			<p className="font-proxima-nova italic font-extrabold text-3xl">
+				asdfasfasfddas
+			</p>
+			<p className="font-serif italic font-extrabold text-3xl">
+				asdfasfasfddas
+			</p>
+			
 			<text className={crimsonPro.className}>
 				<h1 className="text-3xl font-bold underline">Hello, Next.js!</h1>
 			</text>
