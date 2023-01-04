@@ -11,7 +11,7 @@ export default function Page() {
   return (
 		<div className="container mx-auto mb-22 pt-3">
 			<p className="font-proxima-nova italic font-extrabold text-3xl">
-				asdfasfasfddas
+				The quick brown fox jumps over the lazy dog
 			</p>
 			<p className="font-serif italic font-extrabold text-3xl">
 				asdfasfasfddas

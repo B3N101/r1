@@ -37,7 +37,7 @@ export default function Navbar() {
 
 	//281,101
 	return (
-		<header className="border-b-4 border-mxRed flex items-center justify-between py-4 bg-blend-screen">
+		<header className="border-b-4 border-mxRed flex items-center justify-between py-4 saturate-200">
 			<nav className="flex justify-center gap-8">
 				{/* Logo */}
 				<button
