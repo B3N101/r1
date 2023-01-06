@@ -5,6 +5,8 @@ export default function Head() {
 			<title>The Middlesex Anvil </title>
 			<meta name="viewport" content="width=device-width, initial-scale=1" />
 			<link rel="icon" href="/favicon.ico" />
+
+			{/* SEO */}
 			<meta
 				name="description"
 				content="The Anvil is Middlesex's student ran newspaper"

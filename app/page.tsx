@@ -115,7 +115,7 @@ export default function Page() {
 				<p className="text-xl">
 					This is a test of the emergency broadcast system. This is a test of
 					the emergency broadcast system. This is a test of the emergency
-					broadcast system. This is a test of the emergency broadcast system.
+					broadcast system. This is a test of the emergency broadcast sddystem.
 				</p>
 			</text>
 		</div>

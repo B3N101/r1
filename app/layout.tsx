@@ -12,6 +12,7 @@ import Footer from "./components/Footer";
 const inter = Inter({
 	subsets: ["latin"],
 	variable: "--font-inter",
+	weight: "variable",
 });
 
 const merriweather = Merriweather({
