@@ -80,7 +80,7 @@ npm i next@latest react@latest react-dom@latest eslint-config-next@latest
 - ```osv-scanner package-lock.json```
 
 
-## GIT:
+## Git:
 - git status 
 - git commit -m "message"
 - git push origin
