@@ -14,8 +14,8 @@ module.exports = {
 		},
 		extend: {
 			fontFamily: {
-				'proxima-nova': ['proxima-nova', 'sans-serif'],
-				'crimson': ['crimson', 'sans']
+				"proxima-nova": ["proxima-nova", "sans-serif"],
+				crimson: ["crimson", "sans"],
 			},
 		},
 	},

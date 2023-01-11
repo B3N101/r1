@@ -1,6 +1,7 @@
 export default function Head() {
-  const image = "https://og-image.vercel.app/%3Cb%3EMx%3C%2Fb%3EAnvil.png?theme=dark&md=1&fontSize=225px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fvercel-triangle-white.svg&widths=0&heights=0"
-  return (
+	const image =
+		"https://og-image.vercel.app/%3Cb%3EMx%3C%2Fb%3EAnvil.png?theme=dark&md=1&fontSize=225px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fvercel-triangle-white.svg&widths=0&heights=0";
+	return (
 		<>
 			<title>The Middlesex Anvil </title>
 			<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -23,8 +24,8 @@ export default function Head() {
 			<meta name="twitter:card" content="summary_large_image" />
 			<meta name="twitter:site" content="@anvilnewspaper" />
 			<meta name="twitter:creator" content="@anvilnewspaper" />
-      <meta name="twitter:domain" content="mxanvil.vercel.app" />
-      <meta name="twitter:url" content="https://mxanvil.vercel.app" />
+			<meta name="twitter:domain" content="mxanvil.vercel.app" />
+			<meta name="twitter:url" content="https://mxanvil.vercel.app" />
 			<meta name="twitter:title" content="The Middlesex Anvil" />
 			<meta
 				name="twitter:description"

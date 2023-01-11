@@ -1,14 +1,14 @@
 // q: how do i run seed script
 // a: npx ts-node site/prisma/seed.ts
 
-const { PrismaClient } = require("@prisma/client");
+import { PrismaClient } from "@prisma/client";
 const prisma = new PrismaClient();
 
 async function main() {
 	const deletedUserInfo = await prisma.category.deleteMany();
-  console.log(`Deleted ${deletedUserInfo.count} users`);
+	console.log(`Deleted ${deletedUserInfo.count} users`);
 }
-main()
+main();
 /** Alternatively, you can add arguments to specify which users should be deleted */
 // const deletedUserInfo = await prisma.user.deleteMany({
 //   where: {
@@ -17,7 +17,6 @@ main()
 //     }
 //   }
 // })
-
 
 /*
 async function main() {

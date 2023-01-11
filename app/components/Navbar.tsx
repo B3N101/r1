@@ -19,18 +19,18 @@ import ThemeSwitch from "./icons/ThemeSwitch";
 
 export default function Navbar() {
 	const [dropdownState, changeDropdown] = useState(false);
-	const { theme, setTheme } = useTheme();
+	/*const { theme, setTheme } = useTheme();
 	function toggleTheme() {
 		setTheme(theme === "dark" ? "light" : "dark");
-	}
+	}*/
 	function toggleDropdown() {
 		changeDropdown(!dropdownState);
 	}
 	// router
 	const router = useRouter();
 	const pathName = usePathname();
-	
-	function isDisabled() : boolean {
+
+	function isDisabled(): boolean {
 		if (pathName == "/") return true;
 		return false;
 	}
@@ -47,9 +47,8 @@ export default function Navbar() {
 						if (pathName != "/") {
 							router.push("/");
 						}
-					}}
-				>
-					<Image src={Logo} alt="logo" width={291} height={101}/>
+					}}>
+					<Image src={Logo} alt="logo" width={291} height={101} />
 				</button>
 
 				{/* Theme Switch */}
@@ -74,8 +73,7 @@ export default function Navbar() {
 				<button
 					aria-label="Toggle Search Menu"
 					type="button"
-					className="ml-1 mr-1 h-8 w-8 rounded p-1 sm:ml-4"
-				>
+					className="ml-1 mr-1 h-8 w-8 rounded p-1 sm:ml-4">
 					<MagnifyingGlassIcon className="h-6 w-6 block sm:hidden" />
 				</button>
 
@@ -85,8 +83,7 @@ export default function Navbar() {
 						aria-label="Toggle Dark Mode"
 						type="button"
 						className="ml-1 mr-1 h-8 w-8 rounded p-1 sm:ml-4"
-						onClick={toggleDropdown}
-					>
+						onClick={toggleDropdown}>
 						{dropdownState ? (
 							<XMarkIcon className="h-6 w-6" />
 						) : (

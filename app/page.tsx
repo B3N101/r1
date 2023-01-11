@@ -7,9 +7,8 @@ const crimsonPro = Crimson_Pro({
 	variable: "--font-crimson",
 });
 
-
 export default function Page() {
-  return (
+	return (
 		<div className="container mx-auto mb-22 pt-3">
 			<p className="font-proxima-nova italic font-extrabold text-3xl">
 				The quick brown fox jumps over the lazy dog

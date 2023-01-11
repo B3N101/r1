@@ -6,7 +6,7 @@ import Navbar from "@app/components/Navbar";
 
 export default function Page() {
 	const pageName = usePathname();
-	const givenDate:Date = new Date(2021, 0, 1);
+	const givenDate: Date = new Date(2021, 0, 1);
 
 	return (
 		<div>
@@ -32,8 +32,7 @@ Praesent euismod ante lorem, ut posuere ligula suscipit eu. Nunc ultricies dui m
 					image={{
 						imgUrl: "/volcano.jpg",
 						caption: "asdfasdfasf",
-					}}
-				></Post>
+					}}></Post>
 			</div>
 		</div>
 	);
