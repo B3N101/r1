@@ -1,5 +1,6 @@
 "use client";
 
+import { clsx } from "clsx";
 import { useState } from "react";
 import { useTheme } from "next-themes";
 import { useRouter } from "next/navigation";
@@ -37,11 +38,11 @@ export default function Navbar() {
 
 	//281,101
 	return (
-		<header className="border-b-4 border-mxRed flex items-center justify-between py-4 saturate-200">
-			<nav className="flex justify-center gap-8">
+		<header className={clsx("border-b-4 border-mxRed flex items-center justify-between py-4 saturate-200")}>
+			<nav className={clsx("flex justify-center gap-8")}>
 				{/* Logo */}
 				<button
-					className="ml-4 sm:ml-8"
+					className={clsx("ml-4 sm:ml-8")}
 					disabled={isDisabled()}
 					onClick={() => {
 						if (pathName != "/") {
@@ -52,17 +53,17 @@ export default function Navbar() {
 				</button>
 
 				{/* Theme Switch */}
-				<div className="m-4">
+				<div className={clsx("m-4")}>
 					<ThemeSwitch />
 				</div>
 				{/* Desktop */}
-				<div className="hidden sm:block">
-					<div className="flex flex-grow justify-end">
-						<ul className="flex items-center">
-							<li className="mr-6">
+				<div className={clsx("hidden sm:block")}>
+					<div className={clsx("flex flex-grow justify-end")}>
+						<ul className={clsx("flex items-center")}>
+							<li className={clsx("mr-6")}>
 								<Link href="/home">Home</Link>
 							</li>
-							<li className="mr-6">
+							<li className={clsx("mr-6")}>
 								<Link href="/about">About</Link>
 							</li>
 						</ul>
@@ -73,55 +74,58 @@ export default function Navbar() {
 				<button
 					aria-label="Toggle Search Menu"
 					type="button"
-					className="ml-1 mr-1 h-8 w-8 rounded p-1 sm:ml-4">
-					<MagnifyingGlassIcon className="h-6 w-6 block sm:hidden" />
+					className={clsx("ml-1 mr-1 h-8 w-8 rounded p-1 sm:ml-4")}>
+					<MagnifyingGlassIcon className={clsx("h-6 w-6 block sm:hidden")}/>
 				</button>
 
-				<div className="block sm:hidden">
+				<div className={clsx("block sm:hidden")}>
 					{/* Hamburger */}
 					<button
 						aria-label="Toggle Dark Mode"
 						type="button"
-						className="ml-1 mr-1 h-8 w-8 rounded p-1 sm:ml-4"
+						className={clsx("ml-1 mr-1 h-8 w-8 rounded p-1 sm:ml-4")}
 						onClick={toggleDropdown}>
 						{dropdownState ? (
-							<XMarkIcon className="h-6 w-6" />
+							<XMarkIcon className={clsx("h-6 w-6")} />
 						) : (
-							<Bars3Icon className="h-6 w-6" />
+							<Bars3Icon className={clsx("h-6 w-6")} />
 						)}
 					</button>
 
 					{/* Dropdown */}
-					<div className={`${dropdownState ? "block" : "hidden"} sm:hidden`}>
-						<div className="flex flex-grow justify-end">
-							<ul className="flex flex-col items-center">
-								<li className="mr-6">
+					<div className={clsx(
+						dropdownState ? "block" : "hidden",
+						"sm:hidden"
+					)}>
+						<div className={clsx("flex flex-grow justify-end")}>
+							<ul className={clsx("flex flex-col items-center")}>
+								<li className={clsx("mr-6")}>
 									<Link href="/home">Home</Link>
 								</li>
-								<li className="mr-6">
+								<li className={clsx("mr-6")}>
 									<Link href="/about">About</Link>
 								</li>
-								<li className="mr-6">
+								<li className={clsx("mr-6")}>
 									<Link href="/contact">Contact</Link>
 								</li>
 							</ul>
 						</div>
 					</div>
-					<div className="hidden">
-						<div className="flex flex-grow justify-end">
-							<ul className="flex items-center">
-								<li className="mr-6">
+					<div className={clsx("hidden")}>
+						<div className={clsx("flex flex-grow justify-end")}>
+							<ul className={clsx("flex items-center")}>
+								<li className={clsx("mr-6")}>
 									<Link href="/home">Home</Link>
 								</li>
-								<li className="mr-6">
+								<li className={clsx("mr-6")}>
 									<Link href="/about">About</Link>
 								</li>
-								<li className="mr-6">
+								<li className={clsx("mr-6")}>
 									<Link href="/contact">Contact</Link>
 								</li>
 							</ul>
 						</div>
-						<div id="search" className="flex">
+						<div id="search" className={clsx("flex")}>
 							<input type="text" placeholder="Search" />
 						</div>
 					</div>

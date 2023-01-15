@@ -1,5 +1,4 @@
-import text from "./components/text/text";
-import italic from "./components/text/italic";
+import { clsx } from "clsx";
 import Balancer from "react-wrap-balancer";
 import { Crimson_Pro } from "@next/font/google";
 const crimsonPro = Crimson_Pro({
@@ -7,21 +6,25 @@ const crimsonPro = Crimson_Pro({
 	variable: "--font-crimson",
 });
 
-export default function Page() {
+// This function compares two integers and returns
+// true if the first one is less than the second one
+// and false otherwise.
+
+export default function Page(): JSX.Element {
 	return (
-		<div className="container mx-auto mb-22 pt-3">
-			<p className="font-proxima-nova italic font-extrabold text-3xl">
+		<div className={clsx("container mx-auto mb-22 pt-3")}>
+			<p className={clsx("font-proxima-nova italic font-extrabold text-3xl")}>
 				The quick brown fox jumps over the lazy dog
 			</p>
-			<p className="font-serif italic font-extrabold text-3xl">
+			<p className={clsx("font-serif italic font-extrabold text-3xl")}>
 				asdfasfasfddas
 			</p>
 
-			<text className={crimsonPro.className}>
-				<h1 className="text-3xl font-bold underline">Hello, Next.js!</h1>
+			<text className={clsx(crimsonPro.className)}>
+				<h1 className={clsx("text-3xl font-bold underline")}>Hello, Next.js!</h1>
 			</text>
 			<text>
-				<p className="text-xl">
+				<p className={clsx("text-xl")}>
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at auctor
 					turpis. Aenean nec tellus id quam ultricies lacinia. Proin fringilla
 					ultrices dui non posuere. Duis eleifend venenatis mattis. Interdum et
@@ -35,9 +38,9 @@ export default function Page() {
 				</p>
 			</text>
 			<text>
-				<h1 className="text-3xl font-bold underline">Hello, Next.js!</h1>
+				<h1 className={clsx("text-3xl font-bold underline")}>Hello, Next.js!</h1>
 			</text>
-			<text className="text-xl">
+			<text className={clsx("text-xl")}>
 				<Balancer>
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at auctor
 					turpis. Aenean nec tellus id quam ultricies lacinia. Proin fringilla
@@ -52,9 +55,9 @@ export default function Page() {
 				</Balancer>
 			</text>
 			<text>
-				<h1 className="text-3xl font-bold underline">Hello, Next.js!</h1>
+				<h1 className={clsx("text-3xl font-bold underline")}>Hello, Next.js!</h1>
 			</text>
-			<text className="text-xl">
+			<text className={clsx("text-xl")}>
 				<Balancer>
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at auctor
 					turpis. Aenean nec tellus id quam ultricies lacinia. Proin fringilla
@@ -69,71 +72,71 @@ export default function Page() {
 				</Balancer>
 			</text>
 			<text>
-				<h1 className="text-3xl font-bold underline">Hello, Next.js!</h1>
+				<h1 className={clsx("text-3xl font-bold underline")}>Hello, Next.js!</h1>
 			</text>
 			<text>
-				<p className="text-xl">
+				<p className={clsx("text-xl")}>
 					This is a test of the emergency broadcast system. This is a test of
 					the emergency broadcast system. This is a test of the emergency
 					broadcast system. This is a test of the emergency broadcast system.
 				</p>
 			</text>
 			<text>
-				<p className="text-xl">
+				<p className={clsx("text-xl")}>
 					This is a test of the emergency broadcast system. This is a test of
 					the emergency broadcast system. This is a test of the emergency
 					broadcast system. This is a test of the emergency broadcast system.
 				</p>
 			</text>
 			<text>
-				<h1 className="text-3xl font-bold underline">Hello, Next.js!</h1>
+				<h1 className={clsx("text-3xl font-bold underline")}>Hello, Next.js!</h1>
 			</text>
 			<text>
-				<p className="text-xl">
+				<p className={clsx("text-xl")}>
 					This is a test of the emergency broadcast system. This is a test of
 					the emergency broadcast system. This is a test of the emergency
 					broadcast system. This is a test of the emergency broadcast system.
 				</p>
 			</text>
 			<text>
-				<h1 className="text-3xl font-bold underline">Hello, Next.js!</h1>
+				<h1 className={clsx("text-3xl font-bold underline")}>Hello, Next.js!</h1>
 			</text>
 			<text>
-				<p className="text-xl">
+				<p className={clsx("text-xl")}>
 					This is a test of the emergency broadcast system. This is a test of
 					the emergency broadcast system. This is a test of the emergency
 					broadcast system. This is a test of the emergency broadcast system.
 				</p>
 			</text>
 			<text>
-				<p className="text-xl">
+				<p className={clsx("text-xl")}>
 					This is a test of the emergency broadcast system. This is a test of
 					the emergency broadcast system. This is a test of the emergency
 					broadcast system. This is a test of the emergency broadcast system.
 				</p>
 			</text>
 			<text>
-				<p className="text-xl">
+				<p className={clsx("text-xl")}>
 					This is a test of the emergency broadcast system. This is a test of
 					the emergency broadcast system. This is a test of the emergency
 					broadcast system. This is a test of the emergency broadcast system.
 				</p>
 			</text>
 			<text>
-				<h1 className="text-3xl font-bold underline">Hello, Next.js!</h1>
+				<h1 className={clsx("text-3xl font-bold underline")}>Hello, Next.js!</h1>
 			</text>
 			<text>
-				<p className="text-xl">
+				<p className={clsx("text-xl")}>
 					This is a test of the emergency broadcast system. This is a test of
 					the emergency broadcast system. This is a test of the emergency
 					broadcast system. This is a test of the emergency broadcast system.
 				</p>
 			</text>
 			<text>
-				<h1 className="text-3xl font-bold underline">Hello, Next.js!</h1>
+				<h1 className={clsx("text-3xl font-bold underline")}>Hello, Next.js!</h1>
 			</text>
 			<text>
-				<p className="text-xl">
+				<p className={clsx("text-xl")}>
 					This is a test of the emergency broadcast system. This is a test of
 					the emergency broadcast system. This is a test of the emergency
 					broadcast system. This is a test of the emergency broadcast sddystem.
@@ -142,18 +145,3 @@ export default function Page() {
 		</div>
 	);
 }
-
-/*
-<nav className="bg-white dark:bg-neutral-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <Link href="/">Home</Link>
-        <Link href="/">Home</Link>
-        <Link href="/">Home</Link>
-        <Link href="/">Home</Link>
-        <Link href="/">Home</Link>
-
-        <button onClick={toggleTheme}>Toggle Theme</button>
-      </div>
-    </nav>
-
-*/

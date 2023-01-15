@@ -2,9 +2,11 @@
 // a: npx ts-node site/prisma/seed.ts
 
 import { PrismaClient } from "@prisma/client";
+
 const prisma = new PrismaClient();
 
 async function main() {
+	// Delete all users
 	const deletedUserInfo = await prisma.category.deleteMany();
 	console.log(`Deleted ${deletedUserInfo.count} users`);
 }

@@ -1,3 +1,4 @@
+import { clsx } from "clsx";
 import Image from "next/image";
 
 type AppProps = {
@@ -57,7 +58,7 @@ export default function Post({
 
 	return (
 		<div id="post">
-			<div id="postHeading" className="flex justify-evenly">
+			<div id="postHeading" className={clsx("flex justify-evenly")}>
 				<div>
 					<h1>{title}</h1>
 					<h2>{subTitle}</h2>
@@ -78,21 +79,21 @@ export default function Post({
 				</div>
 			</div>
 			{image == undefined ? null : (
-				<div className="m-4">
-					<div className="flex justify-center">
+				<div className={clsx("m-4")}>
+					<div className={clsx("flex justify-center")}>
 						<Image
 							src={image.imgUrl}
 							alt={image.caption}
 							height={1000}
 							width={1000}
-							className="md:w-fit sm:w-screen"
+							className={clsx("md:w-fit sm:w-screen")}
 						/>
 					</div>
-					<p className="flex justify-center pb-8">{image.caption}</p>
+					<p className={clsx("flex justify-center pb-8")}>{image.caption}</p>
 				</div>
 			)}
 			<div>
-				<p className="p-6">{content}</p>
+				<p className={clsx("p-6")}>{content}</p>
 			</div>
 		</div>
 	);
