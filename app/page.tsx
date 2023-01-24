@@ -1,30 +1,37 @@
 import { clsx } from "clsx";
 import Balancer from "react-wrap-balancer";
-import { Crimson_Pro } from "@next/font/google";
+import { Crimson_Pro, Merriweather_Sans, Comic_Neue } from "@next/font/google";
+
 const crimsonPro = Crimson_Pro({
 	subsets: ["latin"],
 	variable: "--font-crimson",
 });
 
+const merriweatherSans = Merriweather_Sans({
+	subsets: ["latin"],
+	variable: "--font-merriweather",
+});
+
+const comicNeue = Comic_Neue({
+	subsets: ["latin"],
+	weight: "400",
+	variable: "--font-comic",
+});
 // This function compares two integers and returns
 // true if the first one is less than the second one
 // and false otherwise.
 
 export default function Page(): JSX.Element {
 	return (
-		<div className={clsx("container mx-auto mb-22 pt-3")}>
-			<p className={clsx("font-proxima-nova italic font-extrabold text-3xl")}>
-				The quick brown fox jumps over the lazy dog
-			</p>
-			<p className={clsx("font-serif italic font-extrabold text-3xl")}>
-				asdfasfasfddas
-			</p>
-
-			<text className={clsx(crimsonPro.className)}>
-				<h1 className={clsx("text-3xl font-bold underline")}>Hello, Next.js!</h1>
+		<div className={clsx("mb-22 container mx-auto pt-3")}>
+			<text>
+				<h1
+					className={clsx(comicNeue.className, "text-3xl font-bold underline")}>
+					Hello, Next.js!
+				</h1>
 			</text>
 			<text>
-				<p className={clsx("text-xl")}>
+				<p className={clsx(merriweatherSans.className, "text-xl")}>
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at auctor
 					turpis. Aenean nec tellus id quam ultricies lacinia. Proin fringilla
 					ultrices dui non posuere. Duis eleifend venenatis mattis. Interdum et
@@ -38,7 +45,13 @@ export default function Page(): JSX.Element {
 				</p>
 			</text>
 			<text>
-				<h1 className={clsx("text-3xl font-bold underline")}>Hello, Next.js!</h1>
+				<h1
+					className={clsx(
+						crimsonPro.className,
+						"text-3xl font-bold underline",
+					)}>
+					Hello, Next.js!
+				</h1>
 			</text>
 			<text className={clsx("text-xl")}>
 				<Balancer>
@@ -55,7 +68,9 @@ export default function Page(): JSX.Element {
 				</Balancer>
 			</text>
 			<text>
-				<h1 className={clsx("text-3xl font-bold underline")}>Hello, Next.js!</h1>
+				<h1 className={clsx("text-3xl font-bold underline")}>
+					Hello, Next.js!
+				</h1>
 			</text>
 			<text className={clsx("text-xl")}>
 				<Balancer>
@@ -72,7 +87,9 @@ export default function Page(): JSX.Element {
 				</Balancer>
 			</text>
 			<text>
-				<h1 className={clsx("text-3xl font-bold underline")}>Hello, Next.js!</h1>
+				<h1 className={clsx("text-3xl font-bold underline")}>
+					Hello, Next.js!
+				</h1>
 			</text>
 			<text>
 				<p className={clsx("text-xl")}>
@@ -89,7 +106,9 @@ export default function Page(): JSX.Element {
 				</p>
 			</text>
 			<text>
-				<h1 className={clsx("text-3xl font-bold underline")}>Hello, Next.js!</h1>
+				<h1 className={clsx("text-3xl font-bold underline")}>
+					Hello, Next.js!
+				</h1>
 			</text>
 			<text>
 				<p className={clsx("text-xl")}>
@@ -99,7 +118,9 @@ export default function Page(): JSX.Element {
 				</p>
 			</text>
 			<text>
-				<h1 className={clsx("text-3xl font-bold underline")}>Hello, Next.js!</h1>
+				<h1 className={clsx("text-3xl font-bold underline")}>
+					Hello, Next.js!
+				</h1>
 			</text>
 			<text>
 				<p className={clsx("text-xl")}>
@@ -123,7 +144,9 @@ export default function Page(): JSX.Element {
 				</p>
 			</text>
 			<text>
-				<h1 className={clsx("text-3xl font-bold underline")}>Hello, Next.js!</h1>
+				<h1 className={clsx("text-3xl font-bold underline")}>
+					Hello, Next.js!
+				</h1>
 			</text>
 			<text>
 				<p className={clsx("text-xl")}>
@@ -133,7 +156,9 @@ export default function Page(): JSX.Element {
 				</p>
 			</text>
 			<text>
-				<h1 className={clsx("text-3xl font-bold underline")}>Hello, Next.js!</h1>
+				<h1 className={clsx("text-3xl font-bold underline")}>
+					Hello, Next.js!
+				</h1>
 			</text>
 			<text>
 				<p className={clsx("text-xl")}>

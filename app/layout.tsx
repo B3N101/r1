@@ -22,7 +22,11 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<head />
-			<body className={clsx(inter.className, "bg-white dark:bg-neutral-700 flex flex-col justify-between")}>
+			<body
+				className={clsx(
+					inter.className,
+					"bg-white dark:bg-neutral-700 flex flex-col justify-between",
+				)}>
 				<ThemeProvider attribute="class">
 					<Navbar />
 					<main className="mb-auto">{children}</main>

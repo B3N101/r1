@@ -86,7 +86,7 @@ export default function Post({
 							alt={image.caption}
 							height={1000}
 							width={1000}
-							className={clsx("md:w-fit sm:w-screen")}
+							className={clsx("sm:w-screen md:w-fit")}
 						/>
 					</div>
 					<p className={clsx("flex justify-center pb-8")}>{image.caption}</p>

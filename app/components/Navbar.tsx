@@ -2,7 +2,6 @@
 
 import { clsx } from "clsx";
 import { useState } from "react";
-import { useTheme } from "next-themes";
 import { useRouter } from "next/navigation";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
@@ -38,7 +37,10 @@ export default function Navbar() {
 
 	//281,101
 	return (
-		<header className={clsx("border-b-4 border-mxRed flex items-center justify-between py-4 saturate-200")}>
+		<header
+			className={clsx(
+				"flex items-center justify-between border-b-4 border-mxRed py-4 saturate-200",
+			)}>
 			<nav className={clsx("flex justify-center gap-8")}>
 				{/* Logo */}
 				<button
@@ -75,7 +77,7 @@ export default function Navbar() {
 					aria-label="Toggle Search Menu"
 					type="button"
 					className={clsx("ml-1 mr-1 h-8 w-8 rounded p-1 sm:ml-4")}>
-					<MagnifyingGlassIcon className={clsx("h-6 w-6 block sm:hidden")}/>
+					<MagnifyingGlassIcon className={clsx("block h-6 w-6 sm:hidden")} />
 				</button>
 
 				<div className={clsx("block sm:hidden")}>
@@ -93,10 +95,8 @@ export default function Navbar() {
 					</button>
 
 					{/* Dropdown */}
-					<div className={clsx(
-						dropdownState ? "block" : "hidden",
-						"sm:hidden"
-					)}>
+					<div
+						className={clsx(dropdownState ? "block" : "hidden", "sm:hidden")}>
 						<div className={clsx("flex flex-grow justify-end")}>
 							<ul className={clsx("flex flex-col items-center")}>
 								<li className={clsx("mr-6")}>

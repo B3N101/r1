@@ -3,18 +3,27 @@ import Link from "next/link";
 
 export default function Footer() {
 	return (
-		<footer className={clsx("bottom p-4 bg-white sm:p-6 dark:bg-gray-900 border-t-mxRed border-t-2 mt-4")}>
+		<footer
+			className={clsx(
+				"bottom bg-white dark:bg-gray-900 mt-4 border-t-2 border-t-mxRed p-4 sm:p-6",
+			)}>
 			<div className={clsx("md:flex md:justify-between")}>
 				<div className={clsx("mb-6 md:mb-0")}>
 					<Link href="/" className={clsx("flex items-center")}>
-						<span className={clsx("self-center text-2xl font-black whitespace-nowrap dark:text-white")}>
+						<span
+							className={clsx(
+								"dark:text-white self-center whitespace-nowrap text-2xl font-black",
+							)}>
 							The Anvil
 						</span>
 					</Link>
 				</div>
-				<div className={clsx("grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3")}>
+				<div className={clsx("grid grid-cols-2 gap-8 sm:grid-cols-3 sm:gap-6")}>
 					<div>
-						<h2 className={clsx("mb-6 text-base font-black text-gray-900 uppercase dark:text-white")}>
+						<h2
+							className={clsx(
+								"text-gray-900 dark:text-white mb-6 text-base font-black uppercase",
+							)}>
 							Categories
 						</h2>
 						<ul className={clsx("dark:text-gray-400")}>
@@ -51,7 +60,10 @@ export default function Footer() {
 						</ul>
 					</div>
 					<div>
-						<h2 className={clsx("mb-6 text-base font-black text-gray-900 uppercase dark:text-white")}>
+						<h2
+							className={clsx(
+								"text-gray-900 dark:text-white mb-6 text-base font-black uppercase",
+							)}>
 							More
 						</h2>
 						<ul className={clsx("text-gray-600 dark:text-gray-400")}>
@@ -77,7 +89,9 @@ export default function Footer() {
 							</li>
 
 							<li className={clsx("mb-4")}>
-								<Link href="/privacy-policy" className={clsx("hover:underline")}>
+								<Link
+									href="/privacy-policy"
+									className={clsx("hover:underline")}>
 									Privacy Policy
 								</Link>
 							</li>
@@ -91,22 +105,31 @@ export default function Footer() {
 				</div>
 			</div>
 
-			<hr className={clsx("my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8")}/>
+			<hr
+				className={clsx(
+					"border-gray-200 dark:border-gray-700 my-6 sm:mx-auto lg:my-8",
+				)}
+			/>
 
 			<div className={clsx("sm:flex sm:items-center sm:justify-between")}>
-				<span className={clsx("text-sm text-gray-500 sm:text-center dark:text-gray-400")}>
+				<span
+					className={clsx(
+						"text-gray-500 dark:text-gray-400 text-sm sm:text-center",
+					)}>
 					© 2023{" "}
 					<Link href="/" className={clsx("hover:underline")}>
 						Middlesex Anvil™
 					</Link>
 					. All Rights Reserved.
 				</span>
-				<div className={clsx("flex mt-4 space-x-6 sm:justify-center sm:mt-0")}>
+				<div className={clsx("mt-4 flex space-x-6 sm:mt-0 sm:justify-center")}>
 					<a
 						href="#"
-						className={clsx("text-gray-500 hover:text-gray-900 dark:hover:text-white")}>
+						className={clsx(
+							"text-gray-500 hover:text-gray-900 dark:hover:text-white",
+						)}>
 						<svg
-							className={clsx("w-5 h-5")}
+							className={clsx("h-5 w-5")}
 							fill="currentColor"
 							viewBox="0 0 24 24"
 							aria-hidden="true">
@@ -120,9 +143,11 @@ export default function Footer() {
 					</a>
 					<a
 						href="#"
-						className={clsx("text-gray-500 hover:text-gray-900 dark:hover:text-white")}>
+						className={clsx(
+							"text-gray-500 hover:text-gray-900 dark:hover:text-white",
+						)}>
 						<svg
-							className={clsx("w-5 h-5")}
+							className={clsx("h-5 w-5")}
 							fill="currentColor"
 							viewBox="0 0 24 24"
 							aria-hidden="true">
@@ -136,9 +161,11 @@ export default function Footer() {
 					</a>
 					<a
 						href="#"
-						className={clsx("text-gray-500 hover:text-gray-900 dark:hover:text-white")}>
+						className={clsx(
+							"text-gray-500 hover:text-gray-900 dark:hover:text-white",
+						)}>
 						<svg
-							className={clsx("w-5 h-5")}
+							className={clsx("h-5 w-5")}
 							fill="currentColor"
 							viewBox="0 0 24 24"
 							aria-hidden="true">
@@ -148,9 +175,11 @@ export default function Footer() {
 					</a>
 					<a
 						href="#"
-						className={clsx("text-gray-500 hover:text-gray-900 dark:hover:text-white")}>
+						className={clsx(
+							"text-gray-500 hover:text-gray-900 dark:hover:text-white",
+						)}>
 						<svg
-							className={clsx("w-5 h-5")}
+							className={clsx("h-5 w-5")}
 							fill="currentColor"
 							viewBox="0 0 24 24"
 							aria-hidden="true">
@@ -164,9 +193,11 @@ export default function Footer() {
 					</a>
 					<a
 						href="#"
-						className={clsx("text-gray-500 hover:text-gray-900 dark:hover:text-white")}>
+						className={clsx(
+							"text-gray-500 hover:text-gray-900 dark:hover:text-white",
+						)}>
 						<svg
-							className={clsx("w-5 h-5")}
+							className={clsx("h-5 w-5")}
 							fill="currentColor"
 							viewBox="0 0 24 24"
 							aria-hidden="true">
