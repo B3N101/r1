@@ -4,7 +4,7 @@
 		"lib": ["dom", "dom.iterable", "esnext"],
 		"allowJs": true,
 		"skipLibCheck": true,
-		"strict": true,
+		"strict": false,
 		"forceConsistentCasingInFileNames": true,
 		"noEmit": true,
 		"esModuleInterop": true,
@@ -27,7 +27,8 @@
 			"@public/*": ["public/*"],
 			"@styles/*": ["styles/*"],
 			"@api/*": ["pages/api/*"],
-			"@lib/*": ["lib/*"]
+			"@lib/*": ["lib/*"],
+			"contentlayer/generated": ["./.contentlayer/generated"]
 		}
 	},
 	"include": [
@@ -35,8 +36,8 @@
 		"**/*.ts",
 		"**/*.tsx",
 		".next/types/**/*.ts",
-		"app/components/CKeditor.tsx",
-		"prisma/seed.js"
+		"prisma/seed.js",
+		".contentlayer/generated"
 	],
 	"exclude": ["node_modules"]
 }
