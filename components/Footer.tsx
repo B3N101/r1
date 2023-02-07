@@ -5,14 +5,14 @@ export default function Footer() {
 	return (
 		<footer
 			className={clsx(
-				"bottom bg-white dark:bg-gray-900 mt-4 border-t-2 border-t-mxRed p-4 sm:p-6",
+				"bottom border-t-mxRed mt-4 border-t-2 bg-white p-4 dark:bg-gray-900 sm:p-6",
 			)}>
 			<div className={clsx("md:flex md:justify-between")}>
 				<div className={clsx("mb-6 md:mb-0")}>
 					<Link href="/" className={clsx("flex items-center")}>
 						<span
 							className={clsx(
-								"dark:text-white self-center whitespace-nowrap text-2xl font-black",
+								"self-center whitespace-nowrap text-2xl font-black dark:text-white",
 							)}>
 							The Anvil
 						</span>
@@ -22,7 +22,7 @@ export default function Footer() {
 					<div>
 						<h2
 							className={clsx(
-								"text-gray-900 dark:text-white mb-6 text-base font-black uppercase",
+								"mb-6 text-base font-black uppercase text-gray-900 dark:text-white",
 							)}>
 							Categories
 						</h2>
@@ -62,7 +62,7 @@ export default function Footer() {
 					<div>
 						<h2
 							className={clsx(
-								"text-gray-900 dark:text-white mb-6 text-base font-black uppercase",
+								"mb-6 text-base font-black uppercase text-gray-900 dark:text-white",
 							)}>
 							More
 						</h2>
@@ -107,14 +107,14 @@ export default function Footer() {
 
 			<hr
 				className={clsx(
-					"border-gray-200 dark:border-gray-700 my-6 sm:mx-auto lg:my-8",
+					"my-6 border-gray-200 dark:border-gray-700 sm:mx-auto lg:my-8",
 				)}
 			/>
 
 			<div className={clsx("sm:flex sm:items-center sm:justify-between")}>
 				<span
 					className={clsx(
-						"text-gray-500 dark:text-gray-400 text-sm sm:text-center",
+						"text-sm text-gray-500 dark:text-gray-400 sm:text-center",
 					)}>
 					© 2023{" "}
 					<Link href="/" className={clsx("hover:underline")}>

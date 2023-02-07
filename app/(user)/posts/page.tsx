@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { allPosts } from "contentlayer/generated";
 
-
 export default function Page() {
 	return (
 		<section>

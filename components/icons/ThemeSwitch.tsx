@@ -1,7 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
-import { SunIcon, MoonIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
 import sunlogo from "@public/sunicon.svg";
 import moonlogo from "@public/moonicon.svg";

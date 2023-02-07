@@ -26,11 +26,11 @@ export default function Page({ params }) {
 	//const MDXContent = useMDXComponent(post.body.code);
 
 	return (
-		<section className="p-6 mx-auto max-w-3xl">
+		<section className="mx-auto max-w-3xl p-6">
 			<h1 className="font-serif text-3xl font-bold">
 				<Balancer>{post.title}</Balancer>
 			</h1>
-			<h2 className="font-serif text-md font-normal italic">
+			<h2 className="text-md font-serif font-normal italic">
 				<Balancer>{post.subtitle}</Balancer>
 			</h2>
 			{/* green text, purple if dark mode */}
@@ -38,19 +38,19 @@ export default function Page({ params }) {
 				<Balancer>{post.date}</Balancer>
 			</p>
 			<div className="mt-4 mb-8 grid grid-cols-[auto_1fr_auto] items-center font-mono text-sm">
-				<div className="bg-neutral-100 dark:bg-neutral-800 rounded-md px-2 py-1 tracking-tighter">
+				<div className="rounded-md bg-neutral-100 px-2 py-1 tracking-tighter dark:bg-neutral-800">
 					<p>{post.date}</p>
 					<Link href={`${post.author}`}>{post.author}</Link>
 				</div>
-				<div className="bg-neutral-50 dark:bg-neutral-800 mx-2 h-[0.2em]" />
+				<div className="mx-2 h-[0.2em] bg-neutral-50 dark:bg-neutral-800" />
 			</div>
 			{/* Horizontal rule */}
-			<div className="border-neutral-200 dark:border-neutral-700 my-4 border-t" />
+			<div className="my-4 border-t border-neutral-200 dark:border-neutral-700" />
 			{
 				<div
 					id="mdx-content"
 					dangerouslySetInnerHTML={{ __html: post.body.html }}
-					className={clsx("prose","dark:prose-invert")}
+					className={clsx("prose", "dark:prose-invert")}
 				/>
 			}
 			{/* <MDXContent /> */}

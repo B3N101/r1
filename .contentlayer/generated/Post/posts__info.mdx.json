@@ -1,22 +1,22 @@
 {
-  "author": "default_author",
-  "category": "default_category",
-  "title": "default_title",
-  "subtitle": "default_subtitle",
-  "date": "2023-01-01T00:00:00.000Z",
-  "headline": false,
-  "body": {
-    "raw": "\n# default_title\nasdfasjdlfkasdd\nf",
-    "html": "<h1>default_title</h1>\n<p>asdfasjdlfkasdd\nf</p>"
-  },
-  "_id": "posts/info.mdx",
-  "_raw": {
-    "sourceFilePath": "posts/info.mdx",
-    "sourceFileName": "info.mdx",
-    "sourceFileDir": "posts",
-    "contentType": "mdx",
-    "flattenedPath": "posts/info"
-  },
-  "type": "Post",
-  "url": "/posts/posts/info"
+	"author": "default_author",
+	"category": "default_category",
+	"title": "default_title",
+	"subtitle": "default_subtitle",
+	"date": "2023-01-01T00:00:00.000Z",
+	"headline": false,
+	"body": {
+		"raw": "\n# default_title\nasdfasjdlfkasdd\nf",
+		"html": "<h1>default_title</h1>\n<p>asdfasjdlfkasdd\nf</p>"
+	},
+	"_id": "posts/info.mdx",
+	"_raw": {
+		"sourceFilePath": "posts/info.mdx",
+		"sourceFileName": "info.mdx",
+		"sourceFileDir": "posts",
+		"contentType": "mdx",
+		"flattenedPath": "posts/info"
+	},
+	"type": "Post",
+	"url": "/posts/posts/info"
 }

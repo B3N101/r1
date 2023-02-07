@@ -9,7 +9,7 @@ export default function Page() {
 				className={clsx(
 					"prose-sm m-4 sm:mx-auto sm:prose lg:prose-lg xl:prose-xl",
 					"prose-headings:text-center prose-h1:underline prose-em:italic",
-					"dark:prose-invert"
+					"dark:prose-invert",
 				)}>
 				<h1>Post Example Title</h1>
 				<h2>

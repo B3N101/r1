@@ -6,7 +6,7 @@
   "date": "2023-01-01",
   "headline": false,
   "body": {
-    "raw": "\n# default_title\nasdfasjdlfkasdd\nf",
+    "raw": "\n# default_title\n\nasdfasjdlfkasdd\nf\n",
     "html": "<h1>default_title</h1>\n<p>asdfasjdlfkasdd\nf</p>"
   },
   "_id": "info.mdx",

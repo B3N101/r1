@@ -21,6 +21,7 @@ The “backend” space is vast: search, analytics, data science, and more – s
 2. Services that work with JavaScript and TypeScript codebases
 
 > **Disclaimer:** I work at Vercel, which partners with companies in this post. I also have personally used many of these tools for my own personal projects. My site currently uses PlanetScale and I'm also an angel investor in Supabase (mentioned below).
+
 ## A new programming model
 
 Relational databases have been around for 25+ years.
@@ -37,19 +38,19 @@ These solutions must be:
 Consider databases like Postgres. New solutions like Neon and Supabase abstract connection management, providing you with a simple way to query and mutate data. In the case of Supabase, there's a client library that uses an HTTP API [built on PostgREST](https://supabase.com/docs/guides/api):
 
 ```jsx
-import { createClient } from '@supabase/supabase-js';
-let supabase = createClient('https://<project>.supabase.co', '<your-anon-key>');
-let { data } = await supabase.from('countries').select();
+import { createClient } from "@supabase/supabase-js";
+let supabase = createClient("https://<project>.supabase.co", "<your-anon-key>");
+let { data } = await supabase.from("countries").select();
 ```
 
 And for Neon:
 
 ```jsx
-import { Client } from '@neondatabase/serverless';
+import { Client } from "@neondatabase/serverless";
 let client = new Client(env.DATABASE_URL);
 let {
-  rows: [{ now }],
-} = await client.query('select now();');
+	rows: [{ now }],
+} = await client.query("select now();");
 ```
 
 Neon's solution is [particularly interesting](https://neon.tech/blog/serverless-driver-for-postgres/).
@@ -57,10 +58,10 @@ Neon's solution is [particularly interesting](https://neon.tech/blog/serverless-
 > The basic premise is simple: our driver redirects the PostgreSQL wire protocol via a special proxy. Our driver connects from the edge function to the proxy over a WebSocket, telling the proxy which database host and port it wants to reach. The proxy opens a TCP connection to that host and port and relays traffic in both directions.
 
 <Image
-  alt={`Neon architecture diagram for connection pooling`}
-  src={`/volcano.jpg`}
-  width={1600}
-  height={840}
+	alt={`Neon architecture diagram for connection pooling`}
+	src={`/volcano.jpg`}
+	width={1600}
+	height={840}
 />
 
 <Callout emoji="💡">
@@ -145,5 +146,3 @@ For example, you can of course run MySQL or Postgres on major cloud providers li
 ² Commonly referred to as OLAP (Online _Analytical_ Processing). These are for your real-time data workloads, like [Clickhouse](https://clickhouse.com/) (also [Tinybird](https://www.tinybird.co/)), [SingleStore](https://www.singlestore.com/), [TimeScale](https://www.timescale.com/), and [ElasticSearch](https://www.elastic.co/).
 
 _Thanks to [Guillermo Rauch](https://twitter.com/rauchg), [Paul Copplestone](https://twitter.com/kiwicopple), [Fredrik Björk](https://twitter.com/fbjork), [Anthony Shew](https://twitter.com/anthonysheww), [Craig Kerstiens](https://twitter.com/craigkerstiens), [Jamie Turner](https://twitter.com/jamwt), [Nikita Shamgunov](https://twitter.com/nikitabase), [Yoko Li](https://twitter.com/stuffyokodraws), [Pratyush Choudhury](https://twitter.com/177pc), [Stas Kelvich](https://twitter.com/kelvich), [Enes Akar](https://twitter.com/enesakar), and [Steven Tey](https://twitter.com/steventey) for reviewing this post._
-
-

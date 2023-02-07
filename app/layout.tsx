@@ -45,9 +45,13 @@ export default function RootLayout({
 			</body>*/}
 			<head />
 			<body
-				className={clsx("bg-white min-h-screen antialiased", inter.className)}>
+				className={clsx("min-h-screen bg-white antialiased", inter.className)}>
 				<ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-					<div className={clsx("flex min-h-screen flex-col", "bg-white dark:bg-black")}>
+					<div
+						className={clsx(
+							"flex min-h-screen flex-col",
+							"bg-white dark:bg-black",
+						)}>
 						<Navbar />
 						<main className="container flex-1">{children}</main>
 						<Footer />

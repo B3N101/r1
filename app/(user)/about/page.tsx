@@ -10,7 +10,7 @@ export default function Page() {
 	return (
 		<div>
 			<p>Page: {pageName} </p>
-			<div id="postWrapper" className={clsx("m-4 prose-invert")}>
+			<div id="postWrapper" className={clsx("prose-invert m-4")}>
 				<Post
 					title="Title"
 					subTitle="subTitle"
