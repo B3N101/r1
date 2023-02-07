@@ -3,10 +3,11 @@
 import "./globals.css";
 import { clsx } from "clsx";
 import { ThemeProvider } from "next-themes";
+//import { ThemeProvider as tp } from "@/components/theme-provider";
 import { Inter } from "@next/font/google";
 
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+import Navbar from "@components/Navbar";
+import Footer from "@components/Footer";
 
 const inter = Inter({
 	subsets: ["latin"],
@@ -22,15 +23,35 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<head />
+			{/*
 			<body
 				className={clsx(
 					inter.className,
-					"bg-white dark:bg-neutral-700 flex flex-col justify-between",
+					"flex flex-col justify-between",
+					"bg-white text-slate-900 dark:bg-slate-900 dark:text-slate-50",
+					"min-h-screen antialiased",
 				)}>
-				<ThemeProvider attribute="class">
+				<ThemeProvider attribute="class" defaultTheme="system" enableSystem>
 					<Navbar />
-					<main className="mb-auto">{children}</main>
+					<main
+						className={clsx(
+							"mb-auto",
+							"bg-white text-slate-900 dark:bg-slate-900 dark:text-slate-50 min-h-screen font-sans antialiased",
+						)}>
+						{children}
+					</main>
 					<Footer />
+				</ThemeProvider>
+			</body>*/}
+			<head />
+			<body
+				className={clsx("bg-white min-h-screen antialiased", inter.className)}>
+				<ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+					<div className={clsx("flex min-h-screen flex-col", "bg-white dark:bg-black")}>
+						<Navbar />
+						<main className="container flex-1">{children}</main>
+						<Footer />
+					</div>
 				</ThemeProvider>
 			</body>
 		</html>

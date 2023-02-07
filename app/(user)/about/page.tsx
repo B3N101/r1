@@ -2,7 +2,7 @@
 
 import { clsx } from "clsx";
 import { usePathname } from "next/navigation";
-import Post from "@app/components/Post";
+import Post from "components/Post";
 
 export default function Page() {
 	const pageName = usePathname();
@@ -10,7 +10,7 @@ export default function Page() {
 	return (
 		<div>
 			<p>Page: {pageName} </p>
-			<div id="postWrapper" className={clsx("m-4")}>
+			<div id="postWrapper" className={clsx("m-4 prose-invert")}>
 				<Post
 					title="Title"
 					subTitle="subTitle"

@@ -17,11 +17,11 @@ export type Post = {
   category: string
   title: string
   subtitle: string
-  date: IsoDateTimeString
+  date: string
   image?: string | undefined
   headline: boolean
-  /** MDX file body */
-  body: MDX
+  /** Markdown file body */
+  body: Markdown
   url: string
 }  
 
