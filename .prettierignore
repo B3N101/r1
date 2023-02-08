@@ -36,3 +36,7 @@ yarn-error.log*
 
 # changelog
 CHANGELOG.md
+
+# .contentalyer folder
+/.contentlayer
+/.contentalyer/
