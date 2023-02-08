@@ -9,17 +9,4 @@ module.exports = {
 	bracketSpacing: true,
 	bracketSameLine: true,
 	trailingComma: "all",
-	importOrder: [
-		"^(react/(.*)$)|^(react$)",
-		"^(next/(.*)$)|^(next$)",
-		"<THIRD_PARTY_MODULES>",
-		"",
-		"^types$",
-		"^@/types/(.*)$",
-		"^@/config/(.*)$",
-		"^@/lib/(.*)$",
-		"^@/components/(.*)$",
-		"^@/styles/(.*)$",
-		"^[./]",
-	],
 };

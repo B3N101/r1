@@ -12,6 +12,10 @@ module.exports = {
 				"proxima-nova": ["proxima-nova", "sans-serif"],
 				crimson: ["crimson", "sans"],
 			},
+			colors: {
+				// Custom colors
+				midnight: "#1A202C",
+			},
 			typography: ({ theme }) => ({
 				pink: {
 					css: {

@@ -2,7 +2,7 @@
 import { allPosts } from "contentlayer/generated";
 import { notFound } from "next/navigation";
 import Balancer from "react-wrap-balancer";
-import { useMDXComponent } from "next-contentlayer/hooks";
+//import { useMDXComponent } from "next-contentlayer/hooks";
 import clsx from "clsx";
 import Link from "next/link";
 
@@ -18,10 +18,6 @@ export default function Page({ params }) {
 	if (!post) {
 		notFound();
 	}
-	const title = post.title;
-	const subtitle = post.subtitle;
-	const date = post.date;
-	const author = post.author;
 
 	//const MDXContent = useMDXComponent(post.body.code);
 
