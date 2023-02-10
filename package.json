@@ -6,7 +6,7 @@
 		"dev": "next dev",
 		"build": "next build",
 		"start": "next start",
-		"preview": "next build && next start  -p 3002",
+		"preview": "next build && next start -p 3002",
 		"lint": "next lint",
 		"seed": "node prisma/seed.js",
 		"format": "prettier -w .",
