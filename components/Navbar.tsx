@@ -63,7 +63,7 @@ export default function Navbar() {
 					<div className={clsx("flex flex-grow justify-end")}>
 						<ul className={clsx("flex items-center")}>
 							<li className={clsx("mr-6")}>
-								<Link href="/home">Home</Link>
+								<Link href="/">Home</Link>
 							</li>
 							<li className={clsx("mr-6")}>
 								<Link href="/about">About</Link>

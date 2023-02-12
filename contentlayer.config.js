@@ -7,7 +7,7 @@ import rehypeAutolinkHeadings from "rehype-autolink-headings";
 export const Post = defineDocumentType(() => ({
 	name: "Post",
 	filePathPattern: "**/*.mdx",
-	contentType: "markdown",
+	contentType: "mdx",
 	fields: {
 		author: {
 			type: "string",
@@ -34,8 +34,7 @@ export const Post = defineDocumentType(() => ({
 			required: false,
 		},
 		headline: {
-			type: "boolean",
-			required: true,
+			type: "boolean"
 		},
 	},
 	/** @type {import('contentlayer/source-files').ComputedFields} */

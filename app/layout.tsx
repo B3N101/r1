@@ -8,6 +8,7 @@ import { Inter } from "@next/font/google";
 
 import Navbar from "@components/Navbar";
 import Footer from "@components/Footer";
+import { AnalyticsWrapper } from "@components/analytics";
 
 const inter = Inter({
 	subsets: ["latin"],
@@ -58,10 +59,11 @@ export default function RootLayout({
 							"bg-white dark:bg-stone-900",
 						)}>
 						<Navbar />
-						<main className="container m-6 flex-1">{children}</main>
+						<main className="container mx-auto">{children}</main>
 						<Footer />
 					</div>
 				</ThemeProvider>
+				<AnalyticsWrapper />
 			</body>
 		</html>
 	);

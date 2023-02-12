@@ -2,9 +2,9 @@
 import { allPosts } from "contentlayer/generated";
 import { notFound } from "next/navigation";
 import Balancer from "react-wrap-balancer";
-//import { useMDXComponent } from "next-contentlayer/hooks";
 import clsx from "clsx";
 import Link from "next/link";
+import Mdx from "@components/mdx";
 
 export async function generateStaticParams() {
 	return allPosts.map((post) => ({
@@ -18,8 +18,6 @@ export default function Page({ params }) {
 	if (!post) {
 		notFound();
 	}
-
-	//const MDXContent = useMDXComponent(post.body.code);
 
 	return (
 		<section className="mx-auto max-w-3xl p-6">
@@ -36,20 +34,16 @@ export default function Page({ params }) {
 			<div className="mt-4 mb-8 grid grid-cols-[auto_1fr_auto] items-center font-mono text-sm">
 				<div className="rounded-md bg-neutral-100 px-2 py-1 tracking-tighter dark:bg-neutral-800">
 					<p>{post.date}</p>
-					<Link href={`${post.author}`}>{post.author}</Link>
+					{/*<Link href={`${post.author}`}>{post.author}</Link>*/}
+					<p>{post.author}</p>
 				</div>
 				<div className="mx-2 h-[0.2em] bg-neutral-50 dark:bg-neutral-800" />
 			</div>
 			{/* Horizontal rule */}
 			<div className="my-4 border-t border-neutral-200 dark:border-neutral-700" />
 			{
-				<div
-					id="mdx-content"
-					dangerouslySetInnerHTML={{ __html: post.body.html }}
-					className={clsx("prose", "dark:prose-invert")}
-				/>
+				<Mdx code={post.body.code} />
 			}
-			{/* <MDXContent /> */}
 		</section>
 	);
 }
