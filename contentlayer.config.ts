@@ -4,6 +4,9 @@ import rehypePrettyCode from "rehype-pretty-code";
 import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 
+function removeWhitespace(str) {
+	return str.replace(/\s/g, "");
+}
 export const Post = defineDocumentType(() => ({
 	name: "Post",
 	filePathPattern: "**/*.mdx",
@@ -36,12 +39,39 @@ export const Post = defineDocumentType(() => ({
 		headline: {
 			type: "boolean"
 		},
+		tags: {
+			type: "list",
+			of: {
+				type: "string"
+			},
+		},
 	},
 	/** @type {import('contentlayer/source-files').ComputedFields} */
 	computedFields: {
 		url: {
 			type: "string",
 			resolve: (doc) => `${doc._raw.flattenedPath}`,
+		},
+		authorSlug: {
+			type: "string",
+			resolve: (doc) => `${removeWhitespace(doc.author)}`,
+		},
+		categorySlug: {
+			type: "string",
+			resolve: (doc) => `${removeWhitespace(doc.category)}`,
+		},
+		
+		tagSlugs: {
+			type: "list",
+			of: {
+				type: "string",
+			},
+			resolve: (doc) => {
+				const tags = doc.tags as string[];
+				let data = Array.from(tags);
+				data = data.map((tag) => { return removeWhitespace(tag.toLowerCase()); });
+				return data;
+			}
 		},
 	},
 }));

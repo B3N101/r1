@@ -24,27 +24,6 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<head />
-			{/*
-			<body
-				className={clsx(
-					inter.className,
-					"flex flex-col justify-between",
-					"bg-white text-slate-900 dark:bg-slate-900 dark:text-slate-50",
-					"min-h-screen antialiased",
-				)}>
-				<ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-					<Navbar />
-					<main
-						className={clsx(
-							"mb-auto",
-							"bg-white text-slate-900 dark:bg-slate-900 dark:text-slate-50 min-h-screen font-sans antialiased",
-						)}>
-						{children}
-					</main>
-					<Footer />
-				</ThemeProvider>
-			</body>*/}
-			<head />
 			<body
 				className={clsx(
 					inter.className,

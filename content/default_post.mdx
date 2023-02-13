@@ -5,6 +5,9 @@ title: "The New York Times x Google News Initiative"
 subtitle: "The New York Times is now a member of the Google News Initiative"
 date: "2019-05-01"
 headline: false
+tags:
+    - Tag1212
+    - Tag22
 ---
 
 ## stuff
@@ -39,7 +42,7 @@ These solutions must be:
 
 Consider databases like Postgres. New solutions like Neon and Supabase abstract connection management, providing you with a simple way to query and mutate data. In the case of Supabase, there's a client library that uses an HTTP API [built on PostgREST]:
 
-```jsx
+```jsx /supabase/
 import { createClient } from "@supabase/supabase-js";
 let supabase = createClient("https://<project>.supabase.co", "<your-anon-key>");
 let { data } = await supabase.from("countries").select();
