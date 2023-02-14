@@ -6,8 +6,8 @@ import { useRouter } from "next/navigation";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-
-import Logo from "@public/anvil.svg";
+// import Logo from "@public/anvil.svg;
+import Logo from "@public/anvilLogo.png";
 
 import {
 	Bars3Icon,

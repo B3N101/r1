@@ -3,6 +3,7 @@ import remarkGfm from "remark-gfm";
 import rehypePrettyCode from "rehype-pretty-code";
 import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
+import readingTime from "reading-time";
 
 function removeWhitespace(str) {
 	return str.replace(/\s/g, "");
@@ -37,12 +38,12 @@ export const Post = defineDocumentType(() => ({
 			required: false,
 		},
 		headline: {
-			type: "boolean"
+			type: "boolean",
 		},
 		tags: {
 			type: "list",
 			of: {
-				type: "string"
+				type: "string",
 			},
 		},
 	},
@@ -60,7 +61,7 @@ export const Post = defineDocumentType(() => ({
 			type: "string",
 			resolve: (doc) => `${removeWhitespace(doc.category)}`,
 		},
-		
+
 		tagSlugs: {
 			type: "list",
 			of: {
@@ -69,9 +70,15 @@ export const Post = defineDocumentType(() => ({
 			resolve: (doc) => {
 				const tags = doc.tags as string[];
 				let data = Array.from(tags);
-				data = data.map((tag) => { return removeWhitespace(tag.toLowerCase()); });
+				data = data.map((tag) => {
+					return removeWhitespace(tag.toLowerCase());
+				});
 				return data;
-			}
+			},
+		},
+		readingTime: {
+			type: "json",
+			resolve: (doc) => readingTime(doc.body.raw),
 		},
 	},
 }));

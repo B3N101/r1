@@ -36,6 +36,7 @@ export default function Page({ params }) {
 					<p>{post.date}</p>
 					{/*<Link href={`${post.author}`}>{post.author}</Link>*/}
 					<p>{post.author}</p>
+					<p>{Math.ceil(post.readingTime.minutes)} min read</p>
 				</div>
 				<div className="mx-2 h-[0.2em] bg-neutral-50 dark:bg-neutral-800" />
 			</div>
