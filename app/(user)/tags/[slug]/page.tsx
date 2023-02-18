@@ -1,6 +1,7 @@
 import clsx from "clsx";
 import { allPosts } from "contentlayer/generated";
 import Link from "next/link";
+import Image from "next/image";
 
 function getPostsByTag(tag) {
 	return allPosts.filter((post) => post.tagSlugs.includes(tag));
@@ -25,14 +26,27 @@ export default function Page({ params }: PageProps) {
 					return 1;
 				})
 				.map((post) => (
-					<Link
-						key={post.url}
-						className="mb-4 flex flex-col space-y-1"
-						href={`/posts/${post.url}`}>
-						<div className="flex w-full flex-col">
-							<p>{post.title}</p>
-						</div>
-					</Link>
+					<div key={post.url} className="border-4 border-current">
+						<Link
+							className="mb-4 flex flex-col space-y-1"
+							href={`/posts/${post.url}`}>
+							<div className="flex w-full flex-col">
+								<p>{post.title}</p>
+							</div>
+						</Link>
+						<>
+							{post.image && (
+								<div className="object-contain">
+									<Image
+										src={post.image}
+										alt={post.title}
+										width={500}
+										height={500}
+									/>
+								</div>
+							)}
+						</>
+					</div>
 				))}
 		</section>
 	);

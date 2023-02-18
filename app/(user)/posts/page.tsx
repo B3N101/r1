@@ -14,7 +14,7 @@ export default function Page() {
 					return 1;
 				})
 				.map((post) => (
-					<div key={post.url} className="border-4">
+					<div key={post.url} className="border-4 border-current">
 						<Link
 							className="mb-4 flex flex-col space-y-1"
 							href={`/posts/${post.url}`}>
@@ -24,7 +24,7 @@ export default function Page() {
 						</Link>
 						<>
 							{post.image && (
-								<div className="object-contain ">
+								<div className="object-contain">
 									<Image
 										src={post.image}
 										alt={post.title}
