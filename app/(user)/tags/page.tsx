@@ -1,9 +1,10 @@
 import Link from "next/link";
+import clsx from "clsx";
 import { allPosts } from "contentlayer/generated";
 
-function removeWhitespace(str) {
-	return str.replace(/\s/g, "");
-}
+// function removeWhitespace(str) {
+// 	return str.replace(/\s/g, "");
+// }
 
 export default function Page() {
 	let tags = allPosts.map((post) => post.tags).flat();
@@ -16,7 +17,7 @@ export default function Page() {
 
 	return (
 		<div>
-			<p>asdfasdfasdfasfd</p>
+			<h1 className={clsx("mb-5 font-serif text-3xl font-bold")}>Tags</h1>
 			<ul>
 				{tags.map((tag, index) => (
 					<li key={tag}>

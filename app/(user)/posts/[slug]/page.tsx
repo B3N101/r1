@@ -2,8 +2,6 @@
 import { allPosts } from "contentlayer/generated";
 import { notFound } from "next/navigation";
 import Balancer from "react-wrap-balancer";
-import clsx from "clsx";
-import Link from "next/link";
 import Mdx from "@components/mdx";
 
 export async function generateStaticParams() {

@@ -1,4 +1,3 @@
-import clsx from "clsx";
 import { allPosts } from "contentlayer/generated";
 import Link from "next/link";
 
