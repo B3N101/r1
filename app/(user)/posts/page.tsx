@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { allPosts } from "contentlayer/generated";
 
 export default function Page() {
@@ -13,14 +14,27 @@ export default function Page() {
 					return 1;
 				})
 				.map((post) => (
-					<Link
-						key={post.url}
-						className="mb-4 flex flex-col space-y-1"
-						href={`/posts/${post.url}`}>
-						<div className="flex w-full flex-col">
-							<p>{post.title}</p>
-						</div>
-					</Link>
+					<div key={post.url} className="border-4">
+						<Link
+							className="mb-4 flex flex-col space-y-1"
+							href={`/posts/${post.url}`}>
+							<div className="flex w-full flex-col">
+								<p>{post.title}</p>
+							</div>
+						</Link>
+						<>
+							{post.image && (
+								<div className="object-contain ">
+									<Image
+										src={post.image}
+										alt={post.title}
+										width={500}
+										height={500}
+									/>
+								</div>
+							)}
+						</>
+					</div>
 				))}
 		</section>
 	);

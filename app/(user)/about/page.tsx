@@ -8,7 +8,7 @@ export default function Page() {
 	const pageName = usePathname();
 
 	return (
-		<div>
+		<div className="mt-4">
 			<p>Page: {pageName} </p>
 			<div id="postWrapper" className={clsx("prose-invert m-4")}>
 				<Post

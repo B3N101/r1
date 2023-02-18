@@ -5,7 +5,7 @@ export default function Footer() {
 	return (
 		<footer
 			className={clsx(
-				"bottom border-t-mxRed mt-4 border-t-2 sm:p-6",
+				"bottom border-current mt-4 border-t-2 sm:p-6",
 			)}>
 			<div className={clsx("md:flex md:justify-between")}>
 				<div className={clsx("mb-6 md:mb-0")}>
