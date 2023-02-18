@@ -9,6 +9,9 @@ const nextConfig = {
 			{ loader: "@next/font/google", options: { subsets: ["latin"] } },
 		],
 	},
+	images: {
+		domains: ["assets.mxanvil.vercel.app"],
+	},
 	reactStrictMode: true,
 	modularizeImports: {
 		"@heroicons/react/24/solid": {
