@@ -14,14 +14,18 @@ export default function Page() {
 	let tagSlugs = allPosts.map((post) => post.tagSlugs).flat();
 	// make tagSlugs unique
 	tagSlugs = [...new Set(tagSlugs)];
+	tags.sort();
+	tags.reverse();
+	tagSlugs.sort();
+	tagSlugs.reverse();
 
 	return (
 		<div>
-			<h1 className={clsx("mb-5 font-serif text-3xl font-bold")}>Tags</h1>
+			<h1 className={clsx("mb-5 font-serif text-3xl font-bold")}>Issues</h1>
 			<ul>
 				{tags.map((tag, index) => (
 					<li key={tag}>
-						<Link href={`/tags/${tagSlugs[index]}`}>{tag}</Link>
+						<Link href={`/issues/${tagSlugs[index]}`}>{tag}</Link>
 					</li>
 				))}
 			</ul>
