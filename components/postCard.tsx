@@ -1,31 +1,27 @@
-import Image from "next/image";
-import Link from "next/link";
 import clsx from "clsx";
+import Link from "next/link";
 
-export default function Highlighted({
-	image,
+export default function PostCard({
 	title,
 	subtitle,
-	url,
 	author,
 	date,
+	url,
 }: {
-	image: string;
 	title: string;
 	subtitle: string;
-	url: string;
 	author: string;
 	date: string;
+	url: string;
 }) {
 	return (
-		<div className={clsx("mb-22 container")}>
-			{/* Put text into right grid column */}
+		<Link href={`posts/${url}`}>
 			<div
-				className={clsx(
-					"grid grid-cols-1 justify-center gap-8 md:grid-cols-2",
-				)}>
-				{/* dim or darken background color on hover */}
-				<Link href={`posts/${url}`}>
+				className={clsx("container mx-auto")}>
+				<div
+					className={clsx(
+						"grid grid-cols-1 justify-center gap-8 md:grid-cols-2",
+					)}>
 					<div
 						className={clsx(
 							"h-full w-full hover:bg-neutral-50 hover:dark:bg-neutral-900",
@@ -39,7 +35,6 @@ export default function Highlighted({
 							)}>
 							{title}
 						</h1>
-						{/* Dissapears on mobile */}
 						<div className={clsx("hidden md:block")}>
 							<p className={clsx("text-base font-bold")}>{subtitle}</p>
 							<p className={clsx("text-gray-500", "dark:text-gray-300")}>
@@ -50,12 +45,8 @@ export default function Highlighted({
 							</p>
 						</div>
 					</div>
-				</Link>
-				{/* Center Image on mobile */}
-				<div className={clsx("flex justify-center")}>
-					<Image src={image} alt={title} width={400} height={400} />
 				</div>
 			</div>
-		</div>
+		</Link>
 	);
 }
