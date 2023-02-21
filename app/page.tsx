@@ -1,136 +1,70 @@
+"use client";
 import { clsx } from "clsx";
 import Balancer from "react-wrap-balancer";
-import { Crimson_Pro, Merriweather_Sans, Comic_Neue } from "@next/font/google";
+import { allPosts } from "contentlayer/generated";
+import Image from "next/image";
+import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 
-const crimsonPro = Crimson_Pro({
-	subsets: ["latin"],
-	variable: "--font-crimson",
+const headlinedPosts = allPosts.filter((post) => post.headline);
+
+const pagesByDate = allPosts.sort((a, b) => {
+	if (a.date > b.date) {
+		return -1;
+	} else if (a.date < b.date) {
+		return 1;
+	} else {
+		return 0;
+	}
 });
 
+// const totalPages = Math.ceil(pagesByDate.length / 10);
+
 export default function Page() {
+	const searchParmas = useSearchParams();
+	const page = Number(searchParmas.get("page")) || 1;
+	const pageSize = 10;
+
+	const posts = pagesByDate.slice((page - 1) * pageSize, page * pageSize);
+
 	return (
 		<div className={clsx("mb-22 container mx-auto pt-3")}>
-			<text>
-				<h1
-					className={clsx(
-						crimsonPro.className,
-						"text-3xl font-bold underline",
-					)}>
-					Hello, Next.js!
-				</h1>
-			</text>
-			<text className={clsx("text-xl")}>
-				<Balancer>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at auctor
-					turpis. Aenean nec tellus id quam ultricies lacinia. Proin fringilla
-					ultrices dui non posuere. Duis eleifend venenatis mattis. Interdum et
-					malesuada fames ac ante ipsum primis in faucibus. Nunc sed nunc vel
-					diam tincidunt ultrices sed id neque. Class aptent taciti sociosqu ad
-					litora torquent per conubia nostra, per inceptos himenaeos. Sed sed
-					justo non ipsum porta euismod. Donec odio sapien, mattis vel ante et,
-					gravida molestie nisi. Maecenas efficitur ligula vitae vehicula
-					aliquam. Nullam ut leo at justo vulputate malesuada ac a augue. Nunc
-					vel tempor ipsum.
-				</Balancer>
-			</text>
-			<text>
-				<h1 className={clsx("text-3xl font-bold underline")}>
-					Hello, Next.js!
-				</h1>
-			</text>
-			<text className={clsx("text-xl")}>
-				<Balancer>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at auctor
-					turpis. Aenean nec tellus id quam ultricies lacinia. Proin fringilla
-					ultrices dui non posuere. Duis eleifend venenatis mattis. Interdum et
-					malesuada fames ac ante ipsum primis in faucibus. Nunc sed nunc vel
-					diam tincidunt ultrices sed id neque. Class aptent taciti sociosqu ad
-					litora torquent per conubia nostra, per inceptos himenaeos. Sed sed
-					justo non ipsum porta euismod. Donec odio sapien, mattis vel ante et,
-					gravida molestie nisi. Maecenas efficitur ligula vitae vehicula
-					aliquam. Nullam ut leo at justo vulputate malesuada ac a augue. Nunc
-					vel tempor ipsum.
-				</Balancer>
-			</text>
-			<text>
-				<h1 className={clsx("text-3xl font-bold underline")}>
-					Hello, Next.js!
-				</h1>
-			</text>
-			<p className={clsx("text-xl")}>
-				This is a test of the emergency broadcast system. This is a test of the
-				emergency broadcast system. This is a test of the emergency broadcast
-				system. This is a test of the emergency broadcast system.
-			</p>
-			<text>
-				<p className={clsx("text-xl")}>
-					This is a test of the emergency broadcast system. This is a test of
-					the emergency broadcast system. This is a test of the emergency
-					broadcast system. This is a test of the emergency broadcast system.
-				</p>
-			</text>
-			<text>
-				<h1 className={clsx("text-3xl font-bold underline")}>
-					Hello, Next.js!
-				</h1>
-			</text>
-			<text>
-				<p className={clsx("text-xl")}>
-					This is a test of the emergency broadcast system. This is a test of
-					the emergency broadcast system. This is a test of the emergency
-					broadcast system. This is a test of the emergency broadcast system.
-				</p>
-			</text>
-			<text>
-				<h1 className={clsx("text-3xl font-bold underline")}>
-					Hello, Next.js!
-				</h1>
-			</text>
-			<text>
-				<p className={clsx("text-xl")}>
-					This is a test of the emergency broadcast system. This is a test of
-					the emergency broadcast system. This is a test of the emergency
-					broadcast system. This is a test of the emergency broadcast system.
-				</p>
-			</text>
-			<text>
-				<p className={clsx("text-xl")}>
-					This is a test of the emergency broadcast system. This is a test of
-					the emergency broadcast system. This is a test of the emergency
-					broadcast system. This is a test of the emergency broadcast system.
-				</p>
-			</text>
-			<text>
-				<p className={clsx("text-xl")}>
-					This is a test of the emergency broadcast system. This is a test of
-					the emergency broadcast system. This is a test of the emergency
-					broadcast system. This is a test of the emergency broadcast system.
-				</p>
-			</text>
-			<text>
-				<h1 className={clsx("text-3xl font-bold underline")}>
-					Hello, Next.js!
-				</h1>
-			</text>
-			<text>
-				<p className={clsx("text-xl")}>
-					This is a test of the emergency broadcast system. This is a test of
-					the emergency broadcast system. This is a test of the emergency
-					broadcast system. This is a test of the emergency broadcast system.
-				</p>
-			</text>
-			<text>
-				<h1 className={clsx("text-3xl font-bold underline")}>
-					Hello, Next.js!
-				</h1>
-			</text>
-			<text>
-				<p className={clsx("text-xl")}>
-					This is a test of the emergency broadcast system. This is a test of
-					the emergency broadcast system. This is a test of the emergency
-					broadcast system. This is a test of the emergency broadcast sddystem.
-				</p>
-			</text>
+			<h1 className={clsx("mb-4 text-4xl font-bold")}>Headlined Posts</h1>
+			<ul>
+				{headlinedPosts.map((post) => (
+					<li key={post._id}>
+						<Link href={`posts/${post.url}`}>
+							<Balancer>
+								<h2 className={clsx("text-2xl font-bold")}>{post.title}</h2>
+								<p className={clsx("text-gray-500")}>{post.subtitle}</p>
+								<Image
+									src={post.image}
+									alt={post.title}
+									width={500}
+									height={500}
+								/>
+							</Balancer>
+						</Link>
+					</li>
+				))}
+			</ul>
+
+			<h1 className={clsx("mb-4 text-4xl font-bold")}>Latest 10 Posts</h1>
+			<ul>
+				{posts.map((post) => (
+					<li key={post._id}>
+						<Link href={`posts/${post.url}`}>
+							<Balancer>
+								<h2 className={clsx("text-2xl font-bold")}>{post.title}</h2>
+								<p className={clsx("text-gray-500")}>{post.subtitle}</p>
+								<p className={clsx("text-gray-500")}>{post.date}</p>
+								<p className={clsx("text-gray-500")}>{post.author}</p>
+								<p className={clsx("text-gray-500")}>{post.category}</p>
+							</Balancer>
+						</Link>
+					</li>
+				))}
+			</ul>
 		</div>
 	);
 }
