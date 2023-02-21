@@ -2,9 +2,9 @@
 import { clsx } from "clsx";
 import Balancer from "react-wrap-balancer";
 import { allPosts } from "contentlayer/generated";
-import Image from "next/image";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
+import Highlighted from "@components/highlighted";
 
 const headlinedPosts = allPosts.filter((post) => post.headline);
 
@@ -29,22 +29,10 @@ export default function Page() {
 
 	return (
 		<div className={clsx("mb-22 container mx-auto pt-3")}>
-			<h1 className={clsx("mb-4 text-4xl font-bold")}>Headlined Posts</h1>
 			<ul>
 				{headlinedPosts.map((post) => (
 					<li key={post._id}>
-						<Link href={`posts/${post.url}`}>
-							<Balancer>
-								<h2 className={clsx("text-2xl font-bold")}>{post.title}</h2>
-								<p className={clsx("text-gray-500")}>{post.subtitle}</p>
-								<Image
-									src={post.image}
-									alt={post.title}
-									width={500}
-									height={500}
-								/>
-							</Balancer>
-						</Link>
+						<Highlighted image={post.image} title={post.title} subtitle={post.subtitle} url={post.url} author={post.author} date={post.date} />
 					</li>
 				))}
 			</ul>
