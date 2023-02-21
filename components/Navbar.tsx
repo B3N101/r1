@@ -39,7 +39,9 @@ export default function Navbar() {
 	return (
 		<header
 			className={clsx(
-				"flex items-center justify-between border-b-4 py-4", "border-current","dark:brightness-[1.15]",
+				"flex items-center justify-between border-b-4 py-4",
+				"border-current",
+				"dark:brightness-[1.15]",
 			)}>
 			<nav className={clsx("flex justify-center gap-8")}>
 				{/* Logo */}

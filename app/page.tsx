@@ -7,7 +7,7 @@ const crimsonPro = Crimson_Pro({
 	variable: "--font-crimson",
 });
 
-export default function Page(){
+export default function Page() {
 	return (
 		<div className={clsx("mb-22 container mx-auto pt-3")}>
 			<text>

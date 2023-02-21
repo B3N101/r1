@@ -1,5 +1,6 @@
 export default function Head() {
-	const image = "https://og-image.vercel.app/%3Cb%3EMx%3C%2Fb%3EAnvil.png?theme=dark&md=1&fontSize=225px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fvercel-triangle-white.svg&widths=0&heights=0";
+	const image =
+		"https://og-image.vercel.app/%3Cb%3EMx%3C%2Fb%3EAnvil.png?theme=dark&md=1&fontSize=225px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fvercel-triangle-white.svg&widths=0&heights=0";
 	return (
 		<>
 			<title>The Anvil | Maskhead </title>

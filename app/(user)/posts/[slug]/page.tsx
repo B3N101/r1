@@ -40,9 +40,7 @@ export default function Page({ params }) {
 			</div>
 			{/* Horizontal rule */}
 			<div className="my-4 border-t border-neutral-200 dark:border-neutral-700" />
-			{
-				<Mdx code={post.body.code} />
-			}
+			{<Mdx code={post.body.code} />}
 		</section>
 	);
 }

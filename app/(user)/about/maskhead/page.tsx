@@ -6,7 +6,7 @@ export default function Page() {
 	return (
 		<div
 			className={clsx(
-				"grid grid-cols-2 justify-center justify-items-center items-center mt-4",
+				"mt-4 grid grid-cols-2 items-center justify-center justify-items-center",
 			)}>
 			<h1 className={clsx("col-span-2 text-center text-4xl")}>
 				Editor's in chief

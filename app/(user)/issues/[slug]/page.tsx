@@ -8,9 +8,9 @@ function getPostsByTag(tag) {
 }
 
 interface PageProps {
-    params: {
-        slug: string;
-    };
+	params: {
+		slug: string;
+	};
 }
 
 export default function Page({ params }: PageProps) {

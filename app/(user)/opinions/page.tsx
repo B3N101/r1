@@ -6,7 +6,6 @@ function getPostsByCategory(category) {
 	return allPosts.filter((post) => post.category.includes(category));
 }
 
-
 export default function Page() {
 	const posts = getPostsByCategory("Opinions");
 	return (

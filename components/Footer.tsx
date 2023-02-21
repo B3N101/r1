@@ -3,10 +3,7 @@ import Link from "next/link";
 
 export default function Footer() {
 	return (
-		<footer
-			className={clsx(
-				"bottom border-current mt-4 border-t-2 sm:p-6",
-			)}>
+		<footer className={clsx("bottom mt-4 border-t-2 border-current sm:p-6")}>
 			<div className={clsx("md:flex md:justify-between")}>
 				<div className={clsx("mb-6 md:mb-0")}>
 					<Link href="/" className={clsx("flex items-center")}>
