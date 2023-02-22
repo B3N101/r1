@@ -22,7 +22,8 @@ export default function Highlighted({
 			{/* Put text into right grid column */}
 			<div
 				className={clsx(
-					"grid grid-cols-1 justify-center gap-8 md:grid-cols-2",
+					"grid grid-cols-1 justify-center gap-2 md:grid-cols-2",
+					"sm:gap-8"
 				)}>
 				{/* dim or darken background color on hover */}
 				<Link href={`posts/${url}`}>
