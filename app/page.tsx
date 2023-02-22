@@ -43,7 +43,13 @@ export default function Page() {
 
 	return (
 		<div
-			className={clsx("mb-22 container mx-auto mt-5", "lg:px-64", "md:px-4")}>
+			className={clsx(
+				"mb-22 container mx-auto mt-5",
+				"2xl:px-36",
+				"xl:px-24",
+				"lg:px-12",
+				"md:px-6",
+			)}>
 			<Highlighted
 				image={headlineProps.image}
 				title={headlineProps.title}
@@ -53,7 +59,7 @@ export default function Page() {
 				date={headlineProps.date}
 			/>
 
-			<div className={clsx("border-t-2 mt-4")}>
+			<div className={clsx("mt-4 border-t-2")}>
 				<h1 className={clsx("mb-4 font-bold", "text-2xl", "text-center")}>
 					News:
 				</h1>

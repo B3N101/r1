@@ -40,3 +40,7 @@ CHANGELOG.md
 # .contentalyer folder
 /.contentlayer
 /.contentalyer/
+
+# markdown and mdx
+*.md
+*.mdx

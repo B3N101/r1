@@ -1,14 +1,10 @@
-"use client";
-
 import "./globals.css";
 import { clsx } from "clsx";
-import { ThemeProvider } from "next-themes";
-//import { ThemeProvider as tp } from "@components/theme-provider";
 import { Inter } from "@next/font/google";
-
 import Navbar from "@components/Navbar";
 import Footer from "@components/Footer";
-import { AnalyticsWrapper } from "@components/analytics";
+import { Analytics } from "@components/analytics";
+import { ThemeProvider } from "@components/theme-provider";
 
 const inter = Inter({
 	subsets: ["latin"],
@@ -29,7 +25,7 @@ export default function RootLayout({
 					inter.className,
 					"flex flex-col justify-between",
 					"bg-white text-slate-900 dark:bg-stone-900 dark:text-slate-50",
-					"min-h-screen"
+					"min-h-screen",
 				)}>
 				<ThemeProvider attribute="class" defaultTheme="system" enableSystem>
 					<div
@@ -42,7 +38,7 @@ export default function RootLayout({
 						<Footer />
 					</div>
 				</ThemeProvider>
-				<AnalyticsWrapper />
+				<Analytics />
 			</body>
 		</html>
 	);

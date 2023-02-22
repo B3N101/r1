@@ -16,8 +16,7 @@ export default function PostCard({
 }) {
 	return (
 		<Link href={`posts/${url}`}>
-			<div
-				className={clsx("container mx-auto")}>
+			<div className={clsx("container mx-auto")}>
 				<div
 					className={clsx(
 						"grid grid-cols-1 justify-center gap-8 md:grid-cols-2",

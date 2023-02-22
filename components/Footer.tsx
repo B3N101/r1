@@ -30,8 +30,8 @@ export default function Footer() {
 								</Link>
 							</li>
 							<li className={clsx("mb-4")}>
-								<Link href="/opinion" className={clsx("hover:underline")}>
-									Opinion
+								<Link href="/opinions" className={clsx("hover:underline")}>
+									Opinions
 								</Link>
 							</li>
 							<li className={clsx("mb-4")}>

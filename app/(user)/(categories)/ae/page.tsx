@@ -10,7 +10,9 @@ export default function Page() {
 	const posts = getPostsByCategory("Arts & Entertainment");
 	return (
 		<section>
-			<h1 className="mb-5 font-serif text-3xl font-bold">Arts & Entertainment</h1>
+			<h1 className="mb-5 font-serif text-3xl font-bold">
+				Arts & Entertainment
+			</h1>
 			{posts
 				.sort((a, b) => {
 					if (new Date(a.date) > new Date(b.date)) {

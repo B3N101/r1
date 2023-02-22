@@ -28,6 +28,7 @@
 			"@styles/*": ["styles/*"],
 			"@api/*": ["pages/api/*"],
 			"@lib/*": ["lib/*"],
+			"@/*": ["./*"],
 			"contentlayer/generated": ["./.contentlayer/generated"]
 		}
 	},

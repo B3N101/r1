@@ -23,7 +23,7 @@ export default function Highlighted({
 			<div
 				className={clsx(
 					"grid grid-cols-1 justify-center gap-2 md:grid-cols-2",
-					"sm:gap-8"
+					"sm:gap-8",
 				)}>
 				{/* dim or darken background color on hover */}
 				<Link href={`posts/${url}`}>

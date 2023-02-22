@@ -3,8 +3,20 @@ import { default as NextImage } from "next/image";
 import clsx from "clsx";
 import { useMDXComponent } from "next-contentlayer/hooks";
 
-function Image({ src, alt, height, width }: { src: string; alt: string; height: number; width: number }) {
-	return <NextImage src={src} alt={alt} height={height} width={width} priority />;
+function Image({
+	src,
+	alt,
+	height,
+	width,
+}: {
+	src: string;
+	alt: string;
+	height: number;
+	width: number;
+}) {
+	return (
+		<NextImage src={src} alt={alt} height={height} width={width} priority />
+	);
 }
 
 type Props = {
@@ -18,8 +30,6 @@ type PictureProps = {
 	width: number;
 	caption: string;
 };
-
-
 
 function Picture({ src, alt, height, width, caption }: PictureProps) {
 	return (

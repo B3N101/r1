@@ -15,7 +15,7 @@ import {
 	MagnifyingGlassIcon,
 } from "@heroicons/react/24/solid";
 
-import ThemeSwitch from "./icons/ThemeSwitch";
+import ThemeSwitch from "./ThemeSwitch";
 
 export default function Navbar() {
 	const [dropdownState, changeDropdown] = useState(false);
