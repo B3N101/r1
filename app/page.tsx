@@ -1,7 +1,7 @@
 import { clsx } from "clsx";
-import Balancer from "react-wrap-balancer";
+// import Balancer from "react-wrap-balancer";
 import { allPosts } from "contentlayer/generated";
-import Link from "next/link";
+// import Link from "next/link";
 import Highlighted from "@components/highlighted";
 import PostCard from "@components/postCard";
 
@@ -21,9 +21,9 @@ function getLatestPostsByCategory(category) {
 }
 
 const latestNews = getLatestPostsByCategory("News");
-const latestOpinions = getLatestPostsByCategory("Opinion");
-const latestSports = getLatestPostsByCategory("Sports");
-const latestArts = getLatestPostsByCategory("Arts & Entertainment");
+// const latestOpinions = getLatestPostsByCategory("Opinion");
+// const latestSports = getLatestPostsByCategory("Sports");
+// const latestArts = getLatestPostsByCategory("Arts & Entertainment");
 
 // const totalPages = Math.ceil(pagesByDate.length / 10);
 // const searchParmas = useSearchParams();

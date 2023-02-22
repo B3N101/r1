@@ -3,7 +3,7 @@
 import "./globals.css";
 import { clsx } from "clsx";
 import { ThemeProvider } from "next-themes";
-//import { ThemeProvider as tp } from "@/components/theme-provider";
+//import { ThemeProvider as tp } from "@components/theme-provider";
 import { Inter } from "@next/font/google";
 
 import Navbar from "@components/Navbar";
