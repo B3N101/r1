@@ -29,7 +29,7 @@ export default function RootLayout({
 					inter.className,
 					"flex flex-col justify-between",
 					"bg-white text-slate-900 dark:bg-stone-900 dark:text-slate-50",
-					"min-h-screen antialiased"
+					"min-h-screen"
 				)}>
 				<ThemeProvider attribute="class" defaultTheme="system" enableSystem>
 					<div
