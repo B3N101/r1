@@ -53,7 +53,7 @@ export default function Highlighted({
 				</Link>
 				{/* Center Image on mobile */}
 				<div className={clsx("flex justify-center")}>
-					<Image src={image} alt={title}/>
+					<Image src={image} alt={title} width={400} height={400} />
 				</div>
 			</div>
 		</div>
