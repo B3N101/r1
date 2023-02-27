@@ -70,6 +70,20 @@ export default function Navbar() {
 							<li className={clsx("mr-6")}>
 								<Link href="/about">About</Link>
 							</li>
+							{/* add news, opinions, arts and entertainment, and sports */}
+							<li className={clsx("mr-6")}>
+								<Link href="/opinions">Opinions</Link>
+							</li>
+							<li className={clsx("mr-6")}>
+								<Link href="/arts">Arts & Entertainment</Link>
+							</li>
+							<li className={clsx("mr-6")}>
+								<Link href="/sports">Sports</Link>
+							</li>
+							<li className={clsx("mr-6")}>
+								<Link href="/contact">Contact</Link>
+							</li>
+
 						</ul>
 					</div>
 				</div>
