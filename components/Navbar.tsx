@@ -27,6 +27,8 @@ import {
 } from "@heroicons/react/24/solid";
 
 import ThemeSwitch from "./ThemeSwitch";
+import cn from "@lib/utils";
+import React from "react";
 
 export default function Navbar() {
 	const [dropdownState, changeDropdown] = useState(false);
@@ -66,18 +68,32 @@ export default function Navbar() {
 					<ThemeSwitch />
 				</div>
 			</div>
-			<nav>
+			<nav className="flex justify-center">
 				<NavigationMenu>
 					<NavigationMenuList>
-						<Link href="/docs" legacyBehavior passHref>
-							<NavigationMenuLink className={navigationMenuTriggerStyle()}>
-								Documentation
-							</NavigationMenuLink>
-						</Link>
 						<NavigationMenuItem>
-							<NavigationMenuTrigger>Item One</NavigationMenuTrigger>
-							<NavigationMenuContent>
-								<NavigationMenuLink>Link</NavigationMenuLink>
+							<NavigationMenuTrigger className="h-9">
+								Categories
+							</NavigationMenuTrigger>
+							<NavigationMenuContent className="items-center">
+								<ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
+									<ListItem href="/news" title="News" />
+									<ListItem href="/opinions" title="Opinions" />
+									<ListItem href="/ae" title="Arts & Entertainment" />
+									<ListItem href="/sports" title="Sports" />
+								</ul>
+							</NavigationMenuContent>
+						</NavigationMenuItem>
+						<NavigationMenuItem>
+							<NavigationMenuTrigger className="h-9">
+								About
+							</NavigationMenuTrigger>
+							<NavigationMenuContent className="items-center">
+								<ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
+									<ListItem href="/about" title="About" />
+									<ListItem href="/maskhead" title="Maskhead" />
+									<ListItem href="/privacy" title="Privacy Policy" />
+								</ul>
 							</NavigationMenuContent>
 						</NavigationMenuItem>
 					</NavigationMenuList>
@@ -85,48 +101,11 @@ export default function Navbar() {
 			</nav>
 			<header
 				className={clsx(
-					"flex items-center justify-between border-b-4 py-4",
+					"flex items-center justify-between border-b-4",
 					"border-current",
 					"dark:brightness-[1.15]",
 				)}>
 				<nav className={clsx("mx-auto flex justify-center px-20")}>
-					{/* Logo */}
-					{/* <button
-						className={clsx("ml-4 sm:ml-8")}
-						disabled={isDisabled()}
-						onClick={() => {
-							if (pathName != "/") {
-								router.push("/");
-							}
-						}}>
-						<Image src={Logo} alt="logo" width={291} height={101} />
-					</button> */}
-
-					{/* Theme Switch
-					<div className={clsx("m-4")}>
-						<ThemeSwitch />
-					</div> */}
-					{/* Desktop */}
-					<div className={clsx("hidden sm:block")}>
-						<div className={clsx("grid grid-cols-5 justify-center gap-4")}>
-							<div className={clsx("col-span-1")}>
-								<Link href="/">Home</Link>
-							</div>
-							<div className={clsx("col-span-1")}>
-								<Link href="/about">About</Link>
-							</div>
-							<div className={clsx("col-span-1")}>
-								<Link href="/opinions">Opinions</Link>
-							</div>
-							<div className={clsx("col-span-1")}>
-								<Link href="/arts">Arts & Entertainment</Link>
-							</div>
-							<div className={clsx("col-span-1")}>
-								<Link href="/sports">Sports</Link>
-							</div>
-						</div>
-					</div>
-
 					{/* Mobile */}
 					<button
 						aria-label="Toggle Search Menu"
@@ -190,3 +169,27 @@ export default function Navbar() {
 		</>
 	);
 }
+
+const ListItem = React.forwardRef<
+	React.ElementRef<typeof Link>,
+	React.ComponentPropsWithoutRef<typeof Link>
+	// eslint-disable-next-line react/prop-types, @typescript-eslint/no-unused-vars
+>(({ className, title, children, href, ...props }, ref) => {
+	return (
+		<li>
+			<Link href={href} passHref legacyBehavior {...props}>
+				<NavigationMenuLink
+					className={cn(
+						"block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-slate-100 focus:bg-slate-100 dark:hover:bg-slate-700 dark:focus:bg-slate-700",
+						className,
+					)}>
+					<div className="text-sm font-medium leading-none">{title}</div>
+					<p className="text-sm leading-snug text-slate-500 line-clamp-2 dark:text-slate-400">
+						{children}
+					</p>
+				</NavigationMenuLink>
+			</Link>
+		</li>
+	);
+});
+ListItem.displayName = "ListItem";
