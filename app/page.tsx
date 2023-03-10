@@ -1,4 +1,4 @@
-import { clsx } from "clsx";
+import cn from "@lib/utils";
 // import Balancer from "react-wrap-balancer";
 import { allPosts } from "contentlayer/generated";
 // import Link from "next/link";
@@ -43,7 +43,7 @@ export default function Page() {
 
 	return (
 		<div
-			className={clsx(
+			className={cn(
 				"mb-22 container mx-auto mt-5",
 				"2xl:px-36",
 				"xl:px-24",
@@ -59,11 +59,11 @@ export default function Page() {
 				date={headlineProps.date}
 			/>
 
-			<div className={clsx("mt-4 border-t-2")}>
-				<h1 className={clsx("mb-4 font-bold", "text-2xl", "text-center")}>
+			<div className={cn("mt-4 border-t-2")}>
+				<h1 className={cn("mb-4 font-bold", "text-2xl", "text-center")}>
 					News:
 				</h1>
-				<div className={clsx("grid md:grid-cols-2 lg:grid-cols-4")}>
+				<div className={cn("grid md:grid-cols-2 lg:grid-cols-4")}>
 					{latestNews.map((post) => (
 						<PostCard
 							key={post._id}

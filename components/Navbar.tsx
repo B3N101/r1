@@ -1,6 +1,6 @@
 "use client";
 
-import { clsx } from "clsx";
+import cn from "@lib/utils";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { usePathname } from "next/navigation";
@@ -27,7 +27,6 @@ import {
 } from "@heroicons/react/24/solid";
 
 import ThemeSwitch from "./ThemeSwitch";
-import cn from "@lib/utils";
 import React from "react";
 
 export default function Navbar() {
@@ -52,7 +51,7 @@ export default function Navbar() {
 	return (
 		<>
 			{/* Center MX IMAGE */}
-			<div className={clsx("flex justify-center p-3")}>
+			<div className={cn("flex justify-center p-3")}>
 				<button
 					disabled={isDisabled()}
 					onClick={() => {
@@ -64,7 +63,7 @@ export default function Navbar() {
 				</button>
 
 				{/* THEME BUTTON IN RIGHT CORNER */}
-				<div className={clsx("absolute right-0 top-0 m-4")}>
+				<div className={cn("absolute right-0 top-0 m-4")}>
 					<ThemeSwitch />
 				</div>
 			</div>
@@ -100,66 +99,66 @@ export default function Navbar() {
 				</NavigationMenu>
 			</nav>
 			<header
-				className={clsx(
+				className={cn(
 					"flex items-center justify-between border-b-4",
 					"border-current",
 					"dark:brightness-[1.15]",
 				)}>
-				<nav className={clsx("mx-auto flex justify-center px-20")}>
+				<nav className={cn("mx-auto flex justify-center px-20")}>
 					{/* Mobile */}
 					<button
 						aria-label="Toggle Search Menu"
 						type="button"
-						className={clsx("ml-1 mr-1 h-8 w-8 rounded p-1 sm:ml-4")}>
-						<MagnifyingGlassIcon className={clsx("block h-6 w-6 sm:hidden")} />
+						className={cn("ml-1 mr-1 h-8 w-8 rounded p-1 sm:ml-4")}>
+						<MagnifyingGlassIcon className={cn("block h-6 w-6 sm:hidden")} />
 					</button>
 
-					<div className={clsx("block sm:hidden")}>
+					<div className={cn("block sm:hidden")}>
 						{/* Hamburger */}
 						<button
 							aria-label="Toggle Dark Mode"
 							type="button"
-							className={clsx("ml-1 mr-1 h-8 w-8 rounded p-1 sm:ml-4")}
+							className={cn("ml-1 mr-1 h-8 w-8 rounded p-1 sm:ml-4")}
 							onClick={toggleDropdown}>
 							{dropdownState ? (
-								<XMarkIcon className={clsx("h-6 w-6")} />
+								<XMarkIcon className={cn("h-6 w-6")} />
 							) : (
-								<Bars3Icon className={clsx("h-6 w-6")} />
+								<Bars3Icon className={cn("h-6 w-6")} />
 							)}
 						</button>
 
 						{/* Dropdown */}
 						<div
-							className={clsx(dropdownState ? "block" : "hidden", "sm:hidden")}>
-							<div className={clsx("flex flex-grow justify-end")}>
-								<ul className={clsx("flex flex-col items-center")}>
-									<li className={clsx("mr-6")}>
+							className={cn(dropdownState ? "block" : "hidden", "sm:hidden")}>
+							<div className={cn("flex flex-grow justify-end")}>
+								<ul className={cn("flex flex-col items-center")}>
+									<li className={cn("mr-6")}>
 										<Link href="/home">Home</Link>
 									</li>
-									<li className={clsx("mr-6")}>
+									<li className={cn("mr-6")}>
 										<Link href="/about">About</Link>
 									</li>
-									<li className={clsx("mr-6")}>
+									<li className={cn("mr-6")}>
 										<Link href="/contact">Contact</Link>
 									</li>
 								</ul>
 							</div>
 						</div>
-						<div className={clsx("hidden")}>
-							<div className={clsx("flex flex-grow justify-end")}>
-								<ul className={clsx("flex items-center")}>
-									<li className={clsx("mr-6")}>
+						<div className={cn("hidden")}>
+							<div className={cn("flex flex-grow justify-end")}>
+								<ul className={cn("flex items-center")}>
+									<li className={cn("mr-6")}>
 										<Link href="/home">Home</Link>
 									</li>
-									<li className={clsx("mr-6")}>
+									<li className={cn("mr-6")}>
 										<Link href="/about">About</Link>
 									</li>
-									<li className={clsx("mr-6")}>
+									<li className={cn("mr-6")}>
 										<Link href="/contact">Contact</Link>
 									</li>
 								</ul>
 							</div>
-							<div id="search" className={clsx("flex")}>
+							<div id="search" className={cn("flex")}>
 								<input type="text" placeholder="Search" />
 							</div>
 						</div>

@@ -1,5 +1,5 @@
 import "./globals.css";
-import { clsx } from "clsx";
+import cn from "@lib/utils";
 import { Inter } from "@next/font/google";
 import Navbar from "@components/Navbar";
 import Footer from "@components/Footer";
@@ -9,7 +9,7 @@ import { ThemeProvider } from "@components/theme-provider";
 const inter = Inter({
 	subsets: ["latin"],
 	variable: "--font-inter",
-	weight: "variable",
+	display: "swap",
 });
 
 export default function RootLayout({
@@ -21,17 +21,17 @@ export default function RootLayout({
 		<html lang="en">
 			<head />
 			<body
-				className={clsx(
+				className={cn(
 					inter.className,
 					"flex flex-col justify-between",
-					"bg-white text-slate-900 dark:bg-stone-900 dark:text-slate-50",
+					"bg-white text-slate-900 dark:bg-neutral-900 dark:text-slate-50",
 					"min-h-screen",
 				)}>
 				<ThemeProvider attribute="class" defaultTheme="system" enableSystem>
 					<div
-						className={clsx(
+						className={cn(
 							"flex min-h-screen flex-col",
-							"bg-white dark:bg-stone-900",
+							"bg-white dark:bg-neutral-900",
 						)}>
 						<Navbar />
 						<main className="container mx-auto">{children}</main>
