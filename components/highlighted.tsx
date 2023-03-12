@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import clsx from "clsx";
+import { format, parseISO } from "date-fns";
+
 
 export default function Highlighted({
 	image,
@@ -44,10 +46,10 @@ export default function Highlighted({
 						<div className={clsx("hidden md:block")}>
 							<p className={clsx("text-base font-bold")}>{subtitle}</p>
 							<p className={clsx("text-gray-500", "dark:text-gray-300")}>
-								{date}
+								{author}
 							</p>
 							<p className={clsx("text-gray-500", "dark:text-gray-300")}>
-								{author}
+								{format(parseISO(date), "LLLL d, yyyy")}
 							</p>
 						</div>
 					</div>

@@ -3,6 +3,8 @@ import { allPosts } from "contentlayer/generated";
 import { notFound } from "next/navigation";
 import Balancer from "react-wrap-balancer";
 import Mdx from "@components/mdx";
+import { format, parseISO } from "date-fns";
+
 
 export async function generateStaticParams() {
 	return allPosts.map((post) => ({
@@ -25,13 +27,11 @@ export default function Page({ params }) {
 			<h2 className="text-md font-serif font-normal italic">
 				<Balancer>{post.subtitle}</Balancer>
 			</h2>
-			{/* green text, purple if dark mode */}
-			<p className="text-neutral-600 dark:text-neutral-400">
-				<Balancer>{post.date}</Balancer>
-			</p>
 			<div className="mt-4 mb-8 grid grid-cols-[auto_1fr_auto] items-center font-mono text-sm">
 				<div className="rounded-md bg-neutral-100 px-2 py-1 tracking-tighter dark:bg-neutral-800">
-					<p>{post.date}</p>
+					<p>
+						{format(parseISO(post.date), "LLLL d, yyyy")}
+					</p>
 					{/*<Link href={`${post.author}`}>{post.author}</Link>*/}
 					<p>{post.author}</p>
 					<p>{Math.ceil(post.readingTime.minutes)} min read</p>
