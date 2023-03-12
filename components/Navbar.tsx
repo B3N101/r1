@@ -179,7 +179,7 @@ const ListItem = React.forwardRef<
 			<Link href={href} passHref legacyBehavior {...props}>
 				<NavigationMenuLink
 					className={cn(
-						"block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-slate-100 focus:bg-slate-100 dark:hover:bg-slate-700 dark:focus:bg-slate-700",
+						"block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-slate-100 focus:bg-slate-100 dark:hover:bg-slate-800 dark:focus:bg-black",
 						className,
 					)}>
 					<div className="text-sm font-medium leading-none">{title}</div>
