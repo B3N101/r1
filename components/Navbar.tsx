@@ -1,5 +1,4 @@
 "use client";
-
 import cn from "@lib/utils";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
@@ -74,7 +73,7 @@ export default function Navbar() {
 							<NavigationMenuTrigger className="h-9">
 								Categories
 							</NavigationMenuTrigger>
-							<NavigationMenuContent className="items-center">
+							<NavigationMenuContent className="justify-center items-center">
 								<ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
 									<ListItem href="/news" title="News" />
 									<ListItem href="/opinions" title="Opinions" />
@@ -87,7 +86,7 @@ export default function Navbar() {
 							<NavigationMenuTrigger className="h-9">
 								About
 							</NavigationMenuTrigger>
-							<NavigationMenuContent className="items-center">
+							<NavigationMenuContent className="justify-center items-center">
 								<ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
 									<ListItem href="/about" title="About" />
 									<ListItem href="/maskhead" title="Maskhead" />
