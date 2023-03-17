@@ -1,7 +1,7 @@
 What to include:
 
 ---
-
+```
 author: "Your Name"
 category: "Category"
 title: "Title"
@@ -31,3 +31,4 @@ For images with captions, use the following format:
 <Figure src={src} height={x} width={y} ...>
   <Caption> Caption </Caption>
 </Figure>
+```

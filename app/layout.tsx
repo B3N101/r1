@@ -5,6 +5,7 @@ import Navbar from "@components/Navbar";
 import Footer from "@components/Footer";
 import { Analytics } from "@components/analytics";
 import { ThemeProvider } from "@components/theme-provider";
+import NewNav  from "@components/NewNav";
 
 const inter = Inter({
 	subsets: ["latin"],
@@ -34,6 +35,7 @@ export default function RootLayout({
 							"bg-white dark:bg-neutral-900",
 						)}>
 						<Navbar />
+						<NewNav />
 						<main className="container mx-auto">{children}</main>
 						<Footer />
 					</div>
