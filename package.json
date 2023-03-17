@@ -14,9 +14,6 @@
 	},
 	"dependencies": {
 		"@heroicons/react": "^2.0.13",
-		"@mantine/core": "^5.10.0",
-		"@mantine/hooks": "^5.10.0",
-		"@mantine/tiptap": "^5.10.1",
 		"@next/font": "^13.1.5",
 		"@next/mdx": "^13.1.6",
 		"@prisma/client": "^4.9.0",
