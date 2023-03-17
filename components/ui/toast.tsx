@@ -15,7 +15,6 @@ import {
 	NavigationMenuViewport,
 } from "@/components/ui/navigation-menu";
 
-
 const ToastProvider = ToastPrimitives.Provider;
 
 const ToastViewport = React.forwardRef<

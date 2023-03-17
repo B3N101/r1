@@ -3,7 +3,6 @@ import Link from "next/link";
 import clsx from "clsx";
 import { format, parseISO } from "date-fns";
 
-
 export default function Highlighted({
 	image,
 	title,

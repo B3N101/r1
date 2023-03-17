@@ -17,7 +17,7 @@ export default function NewNav() {
 							aria-hidden
 						/>
 					</NavigationMenu.Trigger>
-					<NavigationMenu.Content className="data-[motion=from-start]:animate-enterFromLeft data-[motion=from-end]:animate-enterFromRight data-[motion=to-start]:animate-exitToLeft data-[motion=to-end]:animate-exitToRight absolute top-0 left-0 w-full sm:w-auto">
+					<NavigationMenu.Content className="data-[motion=from-start]:animate-enterFromLeft data-[motion=from-end]:animate-enterFromRight data-[motion=to-start]:animate-exitToLeft data-[motion=to-end]:animate-exitToRight absolute top-0 left-0 w-full bg-white dark:bg-slate-700 sm:w-auto">
 						<ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
 							<ListItem href="/news" title="News" />
 							<ListItem href="/opinions" title="Opinions" />
@@ -42,7 +42,11 @@ export default function NewNav() {
 							<ListItem href="/contact" title="Contact" />
 							<ListItem href="/privacy" title="Privacy Policy" />
 							<div className="col-span-2">
-								<ListItem href="/subscribe" title="Subscribe" className="bg-red-700"/>
+								<ListItem
+									href="/subscribe"
+									title="Subscribe"
+									className="bg-red-700"
+								/>
 							</div>
 						</ul>
 					</NavigationMenu.Content>
@@ -74,9 +78,7 @@ const ListItem = React.forwardRef<
 						className,
 					)}>
 					<div className="text-sm font-medium leading-none">{title}</div>
-					<p className="text-sm leading-snug line-clamp-2">
-						{children}
-					</p>
+					<p className="text-sm leading-snug line-clamp-2">{children}</p>
 				</NavigationMenu.Link>
 			</Link>
 		</li>

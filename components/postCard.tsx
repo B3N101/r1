@@ -2,7 +2,6 @@ import clsx from "clsx";
 import Link from "next/link";
 import { format, parseISO } from "date-fns";
 
-
 export default function PostCard({
 	title,
 	subtitle,

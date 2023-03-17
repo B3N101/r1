@@ -5,7 +5,6 @@ import Balancer from "react-wrap-balancer";
 import Mdx from "@components/mdx";
 import { format, parseISO } from "date-fns";
 
-
 export async function generateStaticParams() {
 	return allPosts.map((post) => ({
 		slug: post.url,
@@ -29,9 +28,7 @@ export default function Page({ params }) {
 			</h2>
 			<div className="mt-4 mb-8 grid grid-cols-[auto_1fr_auto] items-center font-mono text-sm">
 				<div className="rounded-md bg-neutral-100 px-2 py-1 tracking-tighter dark:bg-neutral-800">
-					<p>
-						{format(parseISO(post.date), "LLLL d, yyyy")}
-					</p>
+					<p>{format(parseISO(post.date), "LLLL d, yyyy")}</p>
 					{/*<Link href={`${post.author}`}>{post.author}</Link>*/}
 					<p>{post.author}</p>
 					<p>{Math.ceil(post.readingTime.minutes)} min read</p>

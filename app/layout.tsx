@@ -1,11 +1,10 @@
 import "./globals.css";
 import cn from "@lib/utils";
 import { Inter } from "@next/font/google";
-import Navbar from "@components/Navbar";
 import Footer from "@components/Footer";
 import { Analytics } from "@components/analytics";
 import { ThemeProvider } from "@components/theme-provider";
-import NewNav  from "@components/NewNav";
+import NewNav from "@components/NewNav";
 import Header from "@components/Header";
 
 const inter = Inter({
@@ -37,7 +36,9 @@ export default function RootLayout({
 						)}>
 						<Header />
 						<NewNav />
-						{/* <Navbar /> */}
+						{/* Horizontal line */}
+						<div className="mt-3 border-b-2 border-neutral-300 dark:border-neutral-700" />
+
 						<main className="container mx-auto">{children}</main>
 						<Footer />
 					</div>
