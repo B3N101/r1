@@ -15,6 +15,7 @@ export default function Header() {
 	return (
 		<header className={cn("flex justify-center p-3")}>
 			<button
+				className={cn("dise")}
 				disabled={isDisabled()}
 				onClick={() => {
 					if (pathName != "/") {
