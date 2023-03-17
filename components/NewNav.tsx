@@ -10,7 +10,7 @@ export function NewNav() {
 		<NavigationMenu.Root className="relative z-[1] flex w-screen justify-center">
 			<NavigationMenu.List className="center m-0 flex list-none rounded-[6px] p-1">
 				<NavigationMenu.Item>
-					<NavigationMenu.Trigger className="group flex select-none items-center justify-between gap-[2px] rounded-[4px] px-3 py-2 text-[15px] font-medium leading-none outline-none">
+					<NavigationMenu.Trigger className="group flex select-none items-center justify-between gap-[2px] rounded-[4px] !rounded-t-none px-3 py-2 text-[15px] font-medium leading-none outline-none">
 						Categories
 						<CaretDownIcon
 							className="duration-[250] relative top-[1px] transition-transform ease-in group-data-[state=open]:-rotate-180"
@@ -28,7 +28,7 @@ export function NewNav() {
 				</NavigationMenu.Item>
 
 				<NavigationMenu.Item>
-					<NavigationMenu.Trigger className="group flex select-none items-center justify-between gap-[2px] rounded-[4px] px-3 py-2 text-[15px] font-medium leading-none outline-none">
+					<NavigationMenu.Trigger className="group flex select-none items-center justify-between gap-[2px] rounded-[4px] !rounded-t-none px-3 py-2 text-[15px] font-medium leading-none outline-none">
 						About
 						<CaretDownIcon
 							className="duration-[250] relative top-[1px] transition-transform ease-in group-data-[state=open]:-rotate-180"
