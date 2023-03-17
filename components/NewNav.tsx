@@ -5,7 +5,7 @@ import React from "react";
 import cn from "@lib/utils";
 import Link from "next/link";
 
-export default function NewNav() {
+export function NewNav() {
 	return (
 		<NavigationMenu.Root className="relative z-[1] flex w-screen justify-center">
 			<NavigationMenu.List className="center m-0 flex list-none rounded-[6px] p-1">
@@ -41,7 +41,7 @@ export default function NewNav() {
 							<ListItem href="/maskhead" title="Maskhead" />
 							<ListItem href="/contact" title="Contact" />
 							<ListItem href="/privacy" title="Privacy Policy" />
-							<div className="col-span-2">
+							<div className="md:col-span-2">
 								<ListItem
 									href="/subscribe"
 									title="Subscribe"
