@@ -4,7 +4,7 @@ import { Inter } from "@next/font/google";
 import Footer from "@components/Footer";
 import { Analytics } from "@components/analytics";
 import { ThemeProvider } from "@components/theme-provider";
-import { NewNav as Navbar } from "@components/NewNav";
+import Navbar from "@components/Navbar";
 import Header from "@components/Header";
 
 const inter = Inter({
@@ -36,6 +36,7 @@ export default function RootLayout({
 						)}>
 						<Header />
 						<Navbar />
+						
 						{/* Horizontal line */}
 						<div className="mt-3 border-b-2 border-neutral-300 dark:border-neutral-700" />
 
