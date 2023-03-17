@@ -5,7 +5,7 @@ import Logo from "@/public/anvilLogo.png";
 import Image from "next/image";
 import ThemeSwitch from "@/components/ThemeSwitch";
 
-export default function Navheader() {
+export default function Header() {
 	const router = useRouter();
 	const pathName = usePathname();
 	function isDisabled(): boolean {

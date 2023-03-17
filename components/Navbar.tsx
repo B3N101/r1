@@ -1,15 +1,8 @@
 "use client";
 import cn from "@lib/utils";
 import { useState } from "react";
-import { useRouter } from "next/navigation";
-import { usePathname } from "next/navigation";
 import Link from "next/link";
-import Image from "next/image";
-// import Logo from "@public/anvil.svg;
-import Logo from "@public/anvilLogo.png";
-import Navheader from "./Navheader";
 
-import { navigationMenuTriggerStyle } from "@/components/ui/navigation-menu";
 import {
 	NavigationMenu,
 	NavigationMenuContent,
@@ -18,7 +11,6 @@ import {
 	NavigationMenuLink,
 	NavigationMenuList,
 	NavigationMenuTrigger,
-	NavigationMenuViewport,
 } from "@/components/ui/navigation-menu";
 import {
 	Bars3Icon,
@@ -26,40 +18,7 @@ import {
 	MagnifyingGlassIcon,
 } from "@heroicons/react/24/solid";
 
-import ThemeSwitch from "./ThemeSwitch";
 import React from "react";
-import { Navigation } from "lucide-react";
-
-function NavHeader() {
-	const router = useRouter();
-	const pathName = usePathname();
-	const [dropdownState, changeDropdown] = useState(false);
-	function toggleDropdown() {
-		changeDropdown(!dropdownState);
-	}
-	function isDisabled(): boolean {
-		if (pathName == "/") return true;
-		return false;
-	}
-	return (
-		<header className={cn("flex justify-center p-3")}>
-			<button
-				disabled={isDisabled()}
-				onClick={() => {
-					if (pathName != "/") {
-						router.push("/");
-					}
-				}}>
-				<Image src={Logo} alt="logo" width={281} height={101} />
-			</button>
-
-			{/* THEME BUTTON IN RIGHT CORNER */}
-			<div className={cn("absolute right-0 top-0 m-4")}>
-				<ThemeSwitch />
-			</div>
-		</header>
-	);
-}
 
 export default function Navbar() {
 	const [dropdownState, changeDropdown] = useState(false);
@@ -74,8 +33,6 @@ export default function Navbar() {
 	//281,101
 	return (
 		<>
-			{/* Center MX IMAGE */}
-			<Navheader />
 			<nav>
 				{/* center */}
 				<div className={cn("flex justify-center")}>

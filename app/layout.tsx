@@ -6,6 +6,7 @@ import Footer from "@components/Footer";
 import { Analytics } from "@components/analytics";
 import { ThemeProvider } from "@components/theme-provider";
 import NewNav  from "@components/NewNav";
+import Header from "@components/Header";
 
 const inter = Inter({
 	subsets: ["latin"],
@@ -34,8 +35,9 @@ export default function RootLayout({
 							"flex min-h-screen flex-col",
 							"bg-white dark:bg-neutral-900",
 						)}>
-						<Navbar />
+						<Header />
 						<NewNav />
+						<Navbar />
 						<main className="container mx-auto">{children}</main>
 						<Footer />
 					</div>
