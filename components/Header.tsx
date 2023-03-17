@@ -3,8 +3,8 @@ import cn from "@/lib/utils";
 import { useRouter, usePathname } from "next/navigation";
 import Logo from "@/public/anvilLogo.png";
 import Image from "next/image";
-import ThemeSwitch from "@/components/ThemeSwitch";
-
+// import ThemeSwitch from "@/components/ThemeSwitch";
+import ThemeSwitch from "./ThemeSwtich";
 export default function Header() {
 	const router = useRouter();
 	const pathName = usePathname();
@@ -15,7 +15,7 @@ export default function Header() {
 	return (
 		<header className={cn("flex sm:justify-center p-3")}>
 			<button
-				className={cn("ml-4 sm:ml-4")}
+				className={cn("ml-4 sm:ml-0")}
 				disabled={isDisabled()}
 				onClick={() => {
 					if (pathName != "/") {
