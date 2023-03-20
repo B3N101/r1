@@ -40,7 +40,7 @@ export default function Navbar() {
 							<ListItem href="/about" title="About" />
 							<ListItem href="/maskhead" title="Maskhead" />
 							<ListItem href="/contact" title="Contact" />
-							<ListItem href="/privacy" title="Privacy Policy" />
+							<ListItem href="/privacy-policy" title="Privacy Policy" />
 							<div className="lg:col-span-2">
 								<ListItem
 									className="bg-red-700"
