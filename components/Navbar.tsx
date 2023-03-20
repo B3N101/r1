@@ -10,7 +10,7 @@ export default function Navbar() {
 		<NavigationMenu.Root className="relative z-[1] flex w-screen justify-center">
 			<NavigationMenu.List className="center m-0 flex list-none rounded-[6px] p-1">
 				<NavigationMenu.Item>
-					<NavigationMenu.Trigger className="group flex select-none items-center justify-between gap-[2px] rounded-[4px] !rounded-t-none px-3 py-2 text-[15px] font-medium leading-none outline-none">
+					<NavigationMenu.Trigger className="group flex select-none items-center justify-between gap-[2px] rounded-[4px] px-3 py-2 text-[15px] font-medium leading-none outline-none hover:bg-gray-100 focus:bg-gray-100 dark:hover:bg-[#212121] dark:focus:bg-[#212121]">
 						Categories
 						<CaretDownIcon
 							className="duration-[250] relative top-[1px] transition-transform ease-in group-data-[state=open]:-rotate-180"
@@ -28,7 +28,7 @@ export default function Navbar() {
 				</NavigationMenu.Item>
 
 				<NavigationMenu.Item>
-					<NavigationMenu.Trigger className="group flex select-none items-center justify-between gap-[2px] rounded-[4px] !rounded-t-none px-3 py-2 text-[15px] font-medium leading-none outline-none">
+					<NavigationMenu.Trigger className="group flex select-none items-center justify-between gap-[2px] rounded-[4px] px-3 py-2 text-[15px] font-medium leading-none outline-none hover:bg-gray-100 focus:bg-gray-100 dark:hover:bg-[#212121] dark:focus:bg-[#212121]">
 						About
 						<CaretDownIcon
 							className="duration-[250] relative top-[1px] transition-transform ease-in group-data-[state=open]:-rotate-180"
@@ -36,16 +36,14 @@ export default function Navbar() {
 						/>
 					</NavigationMenu.Trigger>
 					<NavigationMenu.Content className="data-[motion=from-start]:animate-enterFromLeft data-[motion=from-end]:animate-enterFromRight data-[motion=to-start]:animate-exitToLeft data-[motion=to-end]:animate-exitToRight absolute top-0 left-0 w-full bg-white dark:bg-[#212121] sm:w-auto">
-						<ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
+						<ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[1fr_1fr]">
 							<ListItem href="/about" title="About" />
 							<ListItem href="/maskhead" title="Maskhead" />
 							<ListItem href="/contact" title="Contact" />
 							<ListItem href="/privacy" title="Privacy Policy" />
-							<ListItem
-								href="/subscribe"
-								title="Subscribe"
-								className="bg-red-700 md:col-span-2"
-							/>
+							<div className="lg:col-span-2">
+								<ListItem className="bg-red-700"href="/subscribe" title="Subscribe" />
+							</div>
 						</ul>
 					</NavigationMenu.Content>
 				</NavigationMenu.Item>
@@ -68,7 +66,7 @@ const ListItem = React.forwardRef<
 	// eslint-disable-next-line react/prop-types, @typescript-eslint/no-unused-vars
 >(({ className, title, children, href, ...props }, ref) => {
 	return (
-		<li className="mx-auto text-center">
+		<li className="mx-auto border-[3px] text-center rounded-lg">
 			<Link href={href} passHref legacyBehavior {...props}>
 				<NavigationMenu.Link
 					className={cn(
