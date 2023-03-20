@@ -19,7 +19,7 @@ export default function Page() {
 
 	return (
 		<div className={cn("text-center")}>
-			<h1 className={cn("mb-5 font-serif text-3xl font-bold")}>Authors</h1>
+			<h1 className={cn("mb-5 font-serif text-3xl font-bold")}>Writers</h1>
 			<ul>
 				{authors.map((author, index) => (
 					<li key={author} className={cn("text-lg")}>

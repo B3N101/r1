@@ -21,7 +21,7 @@ export default function Page({ params }: PageProps) {
 	return (
 		<section>
 			<h1 className="mb-5 font-serif text-3xl font-bold">
-				Posts by {authorName}
+				Articles by {authorName}
 			</h1>
 			{posts
 				.sort((a, b) => {
