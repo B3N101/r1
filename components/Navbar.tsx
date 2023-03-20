@@ -4,20 +4,26 @@ import { CaretDownIcon } from "@radix-ui/react-icons";
 import React from "react";
 import cn from "@lib/utils";
 import Link from "next/link";
+import { SubscriptionLink } from "@/config";
 
 export default function Navbar() {
 	return (
 		<NavigationMenu.Root className="relative z-[1] flex w-screen justify-center">
 			<NavigationMenu.List className="center m-0 flex list-none rounded-[6px] p-1">
 				<NavigationMenu.Item>
-					<NavigationMenu.Trigger className="group flex select-none items-center justify-between gap-[2px] rounded-[4px] px-3 py-2 text-[15px] font-medium leading-none outline-none hover:bg-gray-100 focus:bg-gray-100 dark:hover:bg-[#212121] dark:focus:bg-[#212121]">
+					<NavigationMenu.Trigger className="group flex select-none items-center justify-between gap-1 rounded-md px-4 py-3 text-[15px] font-medium leading-none outline-none hover:bg-gray-100 focus:bg-gray-100 dark:hover:bg-[#212121] dark:focus:bg-[#212121]">
 						Categories
 						<CaretDownIcon
 							className="duration-[250] relative top-[1px] transition-transform ease-in group-data-[state=open]:-rotate-180"
 							aria-hidden
 						/>
 					</NavigationMenu.Trigger>
-					<NavigationMenu.Content className="data-[motion=from-start]:animate-enterFromLeft data-[motion=from-end]:animate-enterFromRight data-[motion=to-start]:animate-exitToLeft data-[motion=to-end]:animate-exitToRight absolute top-0 left-0 w-full bg-white dark:bg-[#212121] sm:w-auto">
+					<NavigationMenu.Content
+						className={cn(
+							"data-[motion=from-start]:animate-enterFromLeft data-[motion=from-end]:animate-enterFromRight data-[motion=to-start]:animate-exitToLeft data-[motion=to-end]:animate-exitToRight absolute top-0 left-0 w-full bg-white dark:bg-[#212121] sm:w-auto",
+							// "shadow-md shadow-emerald-500",
+							"border-2",
+						)}>
 						<ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
 							<ListItem href="/news" title="News" />
 							<ListItem href="/opinions" title="Opinions" />
@@ -28,14 +34,19 @@ export default function Navbar() {
 				</NavigationMenu.Item>
 
 				<NavigationMenu.Item>
-					<NavigationMenu.Trigger className="group flex select-none items-center justify-between gap-[2px] rounded-[4px] px-3 py-2 text-[15px] font-medium leading-none outline-none hover:bg-gray-100 focus:bg-gray-100 dark:hover:bg-[#212121] dark:focus:bg-[#212121]">
+					<NavigationMenu.Trigger className="group flex select-none items-center justify-between gap-1 rounded-md px-4 py-3 text-[15px] font-medium leading-none outline-none hover:bg-gray-100 focus:bg-gray-100 dark:hover:bg-[#212121] dark:focus:bg-[#212121]">
 						About
 						<CaretDownIcon
 							className="duration-[250] relative top-[1px] transition-transform ease-in group-data-[state=open]:-rotate-180"
 							aria-hidden
 						/>
 					</NavigationMenu.Trigger>
-					<NavigationMenu.Content className="data-[motion=from-start]:animate-enterFromLeft data-[motion=from-end]:animate-enterFromRight data-[motion=to-start]:animate-exitToLeft data-[motion=to-end]:animate-exitToRight absolute top-0 left-0 w-full bg-white dark:bg-[#212121] sm:w-auto">
+					<NavigationMenu.Content
+						className={cn(
+							"data-[motion=from-start]:animate-enterFromLeft data-[motion=from-end]:animate-enterFromRight data-[motion=to-start]:animate-exitToLeft data-[motion=to-end]:animate-exitToRight absolute top-0 left-0 w-full bg-white dark:bg-[#212121] sm:w-auto",
+							// "shadow-md shadow-emerald-500",
+							"border-2",
+						)}>
 						<ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[1fr_1fr]">
 							<ListItem href="/about" title="About" />
 							<ListItem href="/maskhead" title="Maskhead" />
@@ -43,8 +54,9 @@ export default function Navbar() {
 							<ListItem href="/privacy-policy" title="Privacy Policy" />
 							<div className="lg:col-span-2">
 								<ListItem
-									className="bg-red-700"
-									href="/subscribe"
+									className="bg-red-600 hover:bg-red-800 dark:bg-red-700 dark:hover:bg-red-900"
+									href={SubscriptionLink}
+									target="_blank"
 									title="Subscribe"
 								/>
 							</div>
@@ -71,10 +83,10 @@ const ListItem = React.forwardRef<
 >(({ className, title, children, href, ...props }, ref) => {
 	return (
 		<li className="mx-auto rounded-lg border-[3px] text-center">
-			<Link href={href} passHref legacyBehavior {...props}>
+			<Link href={href} passHref {...props}>
 				<NavigationMenu.Link
 					className={cn(
-						"block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors",
+						"block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-slate-200 dark:hover:bg-slate-500",
 						className,
 					)}>
 					<div className="text-sm font-medium leading-none">{title}</div>

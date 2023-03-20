@@ -76,6 +76,10 @@ export const Post = defineDocumentType(() => ({
 				return data;
 			},
 		},
+		authorSlugs: {
+			type: "string",
+			resolve: (doc) => `${removeWhitespace(doc.author)}`,
+		},
 		readingTime: {
 			type: "json",
 			resolve: (doc) => readingTime(doc.body.raw),
