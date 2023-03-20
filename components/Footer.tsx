@@ -87,9 +87,7 @@ export default function Footer() {
 							</li>
 
 							<li className={cn("mb-4")}>
-								<Link
-									href="/privacy-policy"
-									className={cn("hover:underline")}>
+								<Link href="/privacy-policy" className={cn("hover:underline")}>
 									Privacy Policy
 								</Link>
 							</li>
@@ -122,6 +120,7 @@ export default function Footer() {
 				</span>
 				<div className={cn("mt-4 flex space-x-6 sm:mt-0 sm:justify-center")}>
 					<a
+						target="_black"
 						href={SocialLinks.instagram}
 						className={cn(
 							"text-gray-500 hover:text-gray-900 dark:hover:text-white",
@@ -140,6 +139,7 @@ export default function Footer() {
 						<span className={cn("sr-only")}>Instagram page</span>
 					</a>
 					<a
+						target="_black"
 						href={SocialLinks.twitter}
 						className={cn(
 							"text-gray-500 hover:text-gray-900 dark:hover:text-white",
@@ -154,6 +154,7 @@ export default function Footer() {
 						<span className={cn("sr-only")}>Twitter page</span>
 					</a>
 					<a
+						target="_black"
 						href={SocialLinks.github}
 						className={cn(
 							"text-gray-500 hover:text-gray-900 dark:hover:text-white",
