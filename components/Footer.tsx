@@ -1,57 +1,57 @@
-import { clsx } from "clsx";
+import cn from "@lib/utils";
 import Link from "next/link";
 import { SocialLinks } from "@/config";
 
 export default function Footer() {
 	return (
-		<footer className={clsx("bottom mt-4 border-t-2 border-current sm:p-6")}>
-			<div className={clsx("md:flex md:justify-between")}>
-				<div className={clsx("mb-6 md:mb-0")}>
-					<Link href="/" className={clsx("flex items-center")}>
+		<footer className={cn("bottom mt-4 border-t-2 border-current sm:p-6")}>
+			<div className={cn("md:flex md:justify-between")}>
+				<div className={cn("mb-6 md:mb-0")}>
+					<Link href="/" className={cn("flex items-center")}>
 						<span
-							className={clsx(
+							className={cn(
 								"self-center whitespace-nowrap text-2xl font-black dark:text-white",
 							)}>
 							The Anvil
 						</span>
 					</Link>
 				</div>
-				<div className={clsx("grid grid-cols-2 gap-8 sm:grid-cols-3 sm:gap-6")}>
+				<div className={cn("grid grid-cols-2 gap-8 sm:grid-cols-3 sm:gap-6")}>
 					<div>
 						<h2
-							className={clsx(
+							className={cn(
 								"mb-6 text-base font-black uppercase text-gray-900 dark:text-white",
 							)}>
 							Categories
 						</h2>
-						<ul className={clsx("dark:text-gray-400")}>
-							<li className={clsx("mb-4")}>
-								<Link href="/news" className={clsx("hover:underline")}>
+						<ul className={cn("dark:text-gray-400")}>
+							<li className={cn("mb-4")}>
+								<Link href="/news" className={cn("hover:underline")}>
 									News
 								</Link>
 							</li>
-							<li className={clsx("mb-4")}>
-								<Link href="/opinions" className={clsx("hover:underline")}>
+							<li className={cn("mb-4")}>
+								<Link href="/opinions" className={cn("hover:underline")}>
 									Opinions
 								</Link>
 							</li>
-							<li className={clsx("mb-4")}>
-								<Link href="/ae" className={clsx("hover:underline")}>
+							<li className={cn("mb-4")}>
+								<Link href="/ae" className={cn("hover:underline")}>
 									Arts &amp; Entertainment
 								</Link>
 							</li>
-							<li className={clsx("mb-4")}>
-								<Link href="/sports" className={clsx("hover:underline")}>
+							<li className={cn("mb-4")}>
+								<Link href="/sports" className={cn("hover:underline")}>
 									Sports
 								</Link>
 							</li>
-							<li className={clsx("mb-4")}>
-								<Link href="/cartoons" className={clsx("hover:underline")}>
+							<li className={cn("mb-4")}>
+								<Link href="/cartoons" className={cn("hover:underline")}>
 									Cartoons
 								</Link>
 							</li>
 							<li>
-								<a href="/videos" className={clsx("hover:underline")}>
+								<a href="/videos" className={cn("hover:underline")}>
 									Videos
 								</a>
 							</li>
@@ -59,42 +59,42 @@ export default function Footer() {
 					</div>
 					<div>
 						<h2
-							className={clsx(
+							className={cn(
 								"mb-6 text-base font-black uppercase text-gray-900 dark:text-white",
 							)}>
 							More
 						</h2>
-						<ul className={clsx("text-gray-600 dark:text-gray-400")}>
-							<li className={clsx("mb-4")}>
-								<Link href="/about" className={clsx("hover:underline ")}>
+						<ul className={cn("text-gray-600 dark:text-gray-400")}>
+							<li className={cn("mb-4")}>
+								<Link href="/about" className={cn("hover:underline ")}>
 									About
 								</Link>
 							</li>
-							<li className={clsx("mb-4")}>
-								<Link href="/maskhead" className={clsx("hover:underline")}>
+							<li className={cn("mb-4")}>
+								<Link href="/maskhead" className={cn("hover:underline")}>
 									Maskhead
 								</Link>
 							</li>
-							<li className={clsx("mb-4")}>
-								<Link href="/contact" className={clsx("hover:underline")}>
+							<li className={cn("mb-4")}>
+								<Link href="/contact" className={cn("hover:underline")}>
 									Contact
 								</Link>
 							</li>
-							<li className={clsx("mb-4")}>
-								<Link href="/archives" className={clsx("hover:underline")}>
+							<li className={cn("mb-4")}>
+								<Link href="/archives" className={cn("hover:underline")}>
 									Archives
 								</Link>
 							</li>
 
-							<li className={clsx("mb-4")}>
+							<li className={cn("mb-4")}>
 								<Link
 									href="/privacy-policy"
-									className={clsx("hover:underline")}>
+									className={cn("hover:underline")}>
 									Privacy Policy
 								</Link>
 							</li>
 							<li>
-								<Link href="/mission" className={clsx("hover:underline")}>
+								<Link href="/mission" className={cn("hover:underline")}>
 									Mission
 								</Link>
 							</li>
@@ -104,30 +104,30 @@ export default function Footer() {
 			</div>
 
 			<hr
-				className={clsx(
+				className={cn(
 					"my-6 border-gray-200 dark:border-gray-700 sm:mx-auto lg:my-8",
 				)}
 			/>
 
-			<div className={clsx("sm:flex sm:items-center sm:justify-between")}>
+			<div className={cn("sm:flex sm:items-center sm:justify-between")}>
 				<span
-					className={clsx(
+					className={cn(
 						"text-sm text-gray-500 dark:text-gray-400 sm:text-center",
 					)}>
 					© 2023{" "}
-					<Link href="/" className={clsx("hover:underline")}>
+					<Link href="/" className={cn("hover:underline")}>
 						Middlesex Anvil™
 					</Link>
 					{"  "}All Rights Reserved.
 				</span>
-				<div className={clsx("mt-4 flex space-x-6 sm:mt-0 sm:justify-center")}>
+				<div className={cn("mt-4 flex space-x-6 sm:mt-0 sm:justify-center")}>
 					<a
 						href={SocialLinks.instagram}
-						className={clsx(
+						className={cn(
 							"text-gray-500 hover:text-gray-900 dark:hover:text-white",
 						)}>
 						<svg
-							className={clsx("h-5 w-5")}
+							className={cn("h-5 w-5")}
 							fill="currentColor"
 							viewBox="0 0 24 24"
 							aria-hidden="true">
@@ -137,29 +137,29 @@ export default function Footer() {
 								clipRule="evenodd"
 							/>
 						</svg>
-						<span className={clsx("sr-only")}>Instagram page</span>
+						<span className={cn("sr-only")}>Instagram page</span>
 					</a>
 					<a
 						href={SocialLinks.twitter}
-						className={clsx(
+						className={cn(
 							"text-gray-500 hover:text-gray-900 dark:hover:text-white",
 						)}>
 						<svg
-							className={clsx("h-5 w-5")}
+							className={cn("h-5 w-5")}
 							fill="currentColor"
 							viewBox="0 0 24 24"
 							aria-hidden="true">
 							<path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
 						</svg>
-						<span className={clsx("sr-only")}>Twitter page</span>
+						<span className={cn("sr-only")}>Twitter page</span>
 					</a>
 					<a
 						href={SocialLinks.github}
-						className={clsx(
+						className={cn(
 							"text-gray-500 hover:text-gray-900 dark:hover:text-white",
 						)}>
 						<svg
-							className={clsx("h-5 w-5")}
+							className={cn("h-5 w-5")}
 							fill="currentColor"
 							viewBox="0 0 24 24"
 							aria-hidden="true">
@@ -169,7 +169,7 @@ export default function Footer() {
 								clipRule="evenodd"
 							/>
 						</svg>
-						<span className={clsx("sr-only")}>GitHub account</span>
+						<span className={cn("sr-only")}>GitHub account</span>
 					</a>
 				</div>
 			</div>

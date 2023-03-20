@@ -1,4 +1,4 @@
-import clsx from "clsx";
+import cn from "@lib/utils";
 import Link from "next/link";
 import { format, parseISO } from "date-fns";
 
@@ -17,17 +17,17 @@ export default function PostCard({
 }) {
 	return (
 		<Link href={`posts/${url}`}>
-			<div className={clsx("container mx-auto")}>
+			<div className={cn("container mx-auto")}>
 				<div
-					className={clsx(
+					className={cn(
 						"grid grid-cols-1 justify-center gap-8 md:grid-cols-2",
 					)}>
 					<div
-						className={clsx(
+						className={cn(
 							"h-full w-full hover:bg-neutral-50 hover:dark:bg-neutral-900",
 						)}>
 						<h1
-							className={clsx(
+							className={cn(
 								"mb-4 font-bold hover:underline md:text-3xl",
 								"text-2xl",
 								"text-center",
@@ -35,12 +35,12 @@ export default function PostCard({
 							)}>
 							{title}
 						</h1>
-						<div className={clsx("hidden md:block")}>
-							<p className={clsx("text-base font-bold")}>{subtitle}</p>
-							<p className={clsx("text-gray-500", "dark:text-gray-300")}>
+						<div className={cn("hidden md:block")}>
+							<p className={cn("text-base font-bold")}>{subtitle}</p>
+							<p className={cn("text-gray-500", "dark:text-gray-300")}>
 								{author}
 							</p>
-							<p className={clsx("text-gray-500", "dark:text-gray-300")}>
+							<p className={cn("text-gray-500", "dark:text-gray-300")}>
 								{format(parseISO(date), "LLLL d, yyyy")}
 							</p>
 						</div>

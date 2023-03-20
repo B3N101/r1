@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { default as NextImage } from "next/image";
-import clsx from "clsx";
+import cn from "@lib/utils";
 import { useMDXComponent } from "next-contentlayer/hooks";
 
 function Image({
@@ -43,7 +43,7 @@ function Picture({ src, alt, height, width, caption }: PictureProps) {
 export default function Mdx({ code }: Props) {
 	const MDXContent = useMDXComponent(code);
 	return (
-		<section className={clsx("prose", "dark:prose-invert")}>
+		<section className={cn("prose", "dark:prose-invert")}>
 			<MDXContent components={{ Link, Image, Picture }} />
 		</section>
 	);

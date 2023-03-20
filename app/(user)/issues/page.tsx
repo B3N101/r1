@@ -1,5 +1,5 @@
 import Link from "next/link";
-import clsx from "clsx";
+import cn from "@lib/utils";
 import { allPosts } from "contentlayer/generated";
 
 // function removeWhitespace(str) {
@@ -21,7 +21,7 @@ export default function Page() {
 
 	return (
 		<div>
-			<h1 className={clsx("mb-5 font-serif text-3xl font-bold")}>Issues</h1>
+			<h1 className={cn("mb-5 font-serif text-3xl font-bold")}>Issues</h1>
 			<ul>
 				{tags.map((tag, index) => (
 					<li key={tag}>
