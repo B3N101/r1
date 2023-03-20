@@ -13,7 +13,7 @@ export default function Header() {
 		return false;
 	}
 	return (
-		<header className={cn("flex sm:justify-center p-3")}>
+		<header className={cn("flex p-3 sm:justify-center")}>
 			<button
 				className={cn("ml-4 sm:ml-0")}
 				disabled={isDisabled()}

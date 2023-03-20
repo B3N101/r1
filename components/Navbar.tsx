@@ -42,7 +42,11 @@ export default function Navbar() {
 							<ListItem href="/contact" title="Contact" />
 							<ListItem href="/privacy" title="Privacy Policy" />
 							<div className="lg:col-span-2">
-								<ListItem className="bg-red-700"href="/subscribe" title="Subscribe" />
+								<ListItem
+									className="bg-red-700"
+									href="/subscribe"
+									title="Subscribe"
+								/>
 							</div>
 						</ul>
 					</NavigationMenu.Content>
@@ -66,7 +70,7 @@ const ListItem = React.forwardRef<
 	// eslint-disable-next-line react/prop-types, @typescript-eslint/no-unused-vars
 >(({ className, title, children, href, ...props }, ref) => {
 	return (
-		<li className="mx-auto border-[3px] text-center rounded-lg">
+		<li className="mx-auto rounded-lg border-[3px] text-center">
 			<Link href={href} passHref legacyBehavior {...props}>
 				<NavigationMenu.Link
 					className={cn(
