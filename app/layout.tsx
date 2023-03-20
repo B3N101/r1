@@ -6,6 +6,7 @@ import { Analytics } from "@components/analytics";
 import { ThemeProvider } from "@components/theme-provider";
 import Navbar from "@components/Navbar";
 import Header from "@components/Header";
+import CookieConsent from "@components/CookieConsent";
 
 const inter = Inter({
 	subsets: ["latin"],
@@ -27,6 +28,8 @@ export default function RootLayout({
 					"flex flex-col justify-between",
 					"bg-white text-slate-900 dark:bg-neutral-900 dark:text-slate-50",
 					"min-h-screen",
+					"overflow-hidden",
+					"antialiased"
 				)}>
 				<ThemeProvider attribute="class" defaultTheme="system" enableSystem>
 					<div
@@ -36,7 +39,7 @@ export default function RootLayout({
 						)}>
 						<Header />
 						<Navbar />
-						
+
 						{/* Horizontal line */}
 						<div className="mt-3 border-b-2 border-neutral-300 dark:border-neutral-700" />
 
@@ -45,6 +48,7 @@ export default function RootLayout({
 					</div>
 				</ThemeProvider>
 				<Analytics />
+				<CookieConsent />
 			</body>
 		</html>
 	);
