@@ -28,7 +28,7 @@ export default function RootLayout({
 					"flex flex-col justify-between",
 					"bg-white text-slate-900 dark:bg-neutral-900 dark:text-slate-50",
 					"min-h-screen",
-					"overflow-hidden",
+					"overflow-x-hidden",
 					"antialiased"
 				)}>
 				<ThemeProvider attribute="class" defaultTheme="system" enableSystem>
