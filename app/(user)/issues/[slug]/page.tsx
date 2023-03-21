@@ -14,9 +14,10 @@ interface PageProps {
 
 export default function Page({ params }: PageProps) {
 	const posts = getPostsByTag(params.slug);
+	const tag = posts[0].tags[0];
 	return (
-		<section>
-			<h1 className="mb-5 font-serif text-3xl font-bold">Posts</h1>
+		<section> 
+			<h1 className="mb-5 font-serif text-3xl font-bold">Articles from {tag}:</h1>
 			{posts
 				.sort((a, b) => {
 					if (new Date(a.date) > new Date(b.date)) {
@@ -25,7 +26,7 @@ export default function Page({ params }: PageProps) {
 					return 1;
 				})
 				.map((post) => (
-					<div key={post.url} className="border-4 border-current">
+					<div key={post.url} className="border-2 border-current">
 						<Link
 							className="mb-4 flex flex-col space-y-1"
 							href={`/posts/${post.url}`}>
