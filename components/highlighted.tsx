@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import cn from "@lib/utils";
 import { format, parseISO } from "date-fns";
+import removeWhitespace from "@lib/whitespace";
 
 export default function Highlighted({
 	image,
@@ -44,9 +45,9 @@ export default function Highlighted({
 						{/* Dissapears on mobile */}
 						<div className={cn("hidden md:block")}>
 							<p className={cn("text-base font-bold")}>{subtitle}</p>
-							<p className={cn("text-gray-500", "dark:text-gray-300")}>
+							<Link href={`writers/${removeWhitespace(author)}`} className={cn("text-gray-500", "dark:text-gray-300", "hover:text-blue-500")}>
 								{author}
-							</p>
+							</Link>
 							<p className={cn("text-gray-500", "dark:text-gray-300")}>
 								{format(parseISO(date), "LLLL d, yyyy")}
 							</p>
