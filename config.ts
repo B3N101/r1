@@ -44,3 +44,5 @@ export const AnvilStaff = {
 export const ContactInfo = {
 	email: "anvil@mxschool.edu",
 };
+
+export const latestIssue = "Issue 6 - 2022-23";

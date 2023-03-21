@@ -4,7 +4,7 @@ import { CaretDownIcon } from "@radix-ui/react-icons";
 import React from "react";
 import cn from "@lib/utils";
 import Link from "next/link";
-import { SubscriptionLink } from "@/config";
+import { SubscriptionLink, latestIssue } from "@/config";
 
 export default function Navbar() {
 	return (
@@ -29,6 +29,8 @@ export default function Navbar() {
 							<ListItem href="/opinions" title="Opinions" />
 							<ListItem href="/ae" title="Arts & Entertainment" />
 							<ListItem href="/sports" title="Sports" />
+							<ListItem href={`/issue/${latestIssue}`} title="Latest Issue" />
+							<ListItem href="/writers" title="Writers" />
 						</ul>
 					</NavigationMenu.Content>
 				</NavigationMenu.Item>
