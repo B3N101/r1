@@ -29,7 +29,7 @@ export default function RootLayout({
 					"bg-white text-slate-900 dark:bg-neutral-900 dark:text-slate-50",
 					"min-h-screen",
 					"overflow-x-hidden",
-					"antialiased"
+					"antialiased",
 				)}>
 				<ThemeProvider attribute="class" defaultTheme="system" enableSystem>
 					<div

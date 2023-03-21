@@ -2,8 +2,10 @@ import cn from "@lib/utils";
 // import Balancer from "react-wrap-balancer";
 import { allPosts } from "contentlayer/generated";
 // import Link from "next/link";
-import Highlighted from "@components/highlighted";
-import PostCard from "@components/postCard";
+// import Highlighted from "@components/highlighted";
+// import PostCard from "@components/postCard";
+import Image from "next/image";
+import Link from "next/link";
 
 function getLatestPostsByCategory(category) {
 	return allPosts
@@ -21,9 +23,9 @@ function getLatestPostsByCategory(category) {
 }
 
 const latestNews = getLatestPostsByCategory("News");
-// const latestOpinions = getLatestPostsByCategory("Opinion");
-// const latestSports = getLatestPostsByCategory("Sports");
-// const latestArts = getLatestPostsByCategory("Arts & Entertainment");
+const latestOpinions = getLatestPostsByCategory("Opinion");
+const latestSports = getLatestPostsByCategory("Sports");
+const latestArts = getLatestPostsByCategory("Arts & Entertainment");
 
 // const totalPages = Math.ceil(pagesByDate.length / 10);
 // const searchParmas = useSearchParams();
@@ -32,34 +34,127 @@ const latestNews = getLatestPostsByCategory("News");
 
 export default function Page() {
 	const headline = allPosts.find((post) => post.headline);
-	const headlineProps = {
-		image: headline.image,
-		title: headline.title,
-		subtitle: headline.subtitle,
-		url: headline.url,
-		author: headline.author,
-		date: headline.date,
-	};
 
 	return (
-		<div
-			className={cn(
-				"mb-22 container mx-auto mt-5",
-				"2xl:px-36",
-				"xl:px-24",
-				"lg:px-12",
-				"md:px-6",
-			)}>
-			<Highlighted
-				image={headlineProps.image}
-				title={headlineProps.title}
-				subtitle={headlineProps.subtitle}
-				url={headlineProps.url}
-				author={headlineProps.author}
-				date={headlineProps.date}
-			/>
+		<div className="mt-6 grid grid-cols-1 gap-6 lg:grid-cols-2 xl:gap-10">
+			<div className={cn("grid max-w-4xl grid-cols-1 gap-1 md:grid-cols-2")}>
+				<div>
+					<h1 className={cn("mb-4 font-bold", "text-2xl")}>{headline.title}</h1>
+					<h2>
+						{headline.subtitle} - {headline.author}
+					</h2>
+				</div>
+				<Image
+					src={headline.image}
+					alt={headline.title}
+					width={400}
+					height={500}
+				/>
+			</div>
 
-			<div className={cn("mt-4 border-t-2")}>
+			<div id="news">
+				<h1 className={cn("mb-4 text-2xl font-semibold")}>News:</h1>
+				<div className={cn("grid grid-rows-1 gap-3")}>
+					{latestNews.map((post) => (
+						<Link
+							key={post._id}
+							href={`posts/${post.url}`}
+							className={cn("border-b-[1px]")}>
+							<h2
+								className={cn(
+									"text-base font-medium text-gray-700 dark:text-gray-400",
+								)}>
+								{post.author}
+							</h2>
+							<h1 className="text-lg font-medium">{post.title}</h1>
+						</Link>
+					))}
+					<Link
+						className="text-base font-medium text-gray-700 underline dark:text-gray-400"
+						href="/news">
+						All News {"->"}
+					</Link>
+				</div>
+			</div>
+
+			<div id="opinions">
+				<h1 className={cn("mb-4 text-2xl font-semibold")}>Opinions:</h1>
+				<div className={cn("grid grid-rows-1 gap-3")}>
+					{latestOpinions.map((post) => (
+						<Link
+							key={post._id}
+							href={`posts/${post.url}`}
+							className={cn("border-b-[1px]")}>
+							<h2
+								className={cn(
+									"text-base font-medium text-gray-700 dark:text-gray-400",
+								)}>
+								{post.author}
+							</h2>
+							<h1 className="text-lg font-medium">{post.title}</h1>
+						</Link>
+					))}
+					<Link
+						className="text-base font-medium text-gray-700 underline dark:text-gray-400"
+						href="/opinions">
+						All Opinions {"->"}
+					</Link>
+				</div>
+			</div>
+
+			<div id="sports">
+				<h1 className={cn("mb-4 text-2xl font-semibold")}>Sports:</h1>
+				<div className={cn("grid grid-rows-1 gap-3")}>
+					{latestSports.map((post) => (
+						<Link
+							key={post._id}
+							href={`posts/${post.url}`}
+							className={cn("border-b-[1px]")}>
+							<h2
+								className={cn(
+									"text-base font-medium text-gray-700 dark:text-gray-400",
+								)}>
+								{post.author}
+							</h2>
+							<h1 className="text-lg font-medium">{post.title}</h1>
+						</Link>
+					))}
+					<Link
+						className="text-base font-medium text-gray-700 underline dark:text-gray-400"
+						href="/sports">
+						All Sports {"->"}
+					</Link>
+				</div>
+			</div>
+
+			<div id="arts">
+				<h1 className={cn("mb-4 text-2xl font-semibold")}>
+					Arts & Entertainment:
+				</h1>
+				<div className={cn("grid grid-rows-1 gap-3")}>
+					{latestArts.map((post) => (
+						<Link
+							key={post._id}
+							href={`posts/${post.url}`}
+							className={cn("border-b-[1px]")}>
+							<h2
+								className={cn(
+									"text-base font-medium text-gray-700 dark:text-gray-400",
+								)}>
+								{post.author}
+							</h2>
+							<h1 className="text-lg font-medium">{post.title}</h1>
+						</Link>
+					))}
+					<Link
+						className="text-base font-medium text-gray-700 underline dark:text-gray-400"
+						href="/ae">
+						All Arts & Entertainment {"->"}
+					</Link>
+				</div>
+			</div>
+
+			{/* <div className={cn("")}>
 				<h1 className={cn("mb-4 font-bold", "text-2xl", "text-center")}>
 					News:
 				</h1>
@@ -75,7 +170,7 @@ export default function Page() {
 						/>
 					))}
 				</div>
-			</div>
+			</div> */}
 		</div>
 	);
 }

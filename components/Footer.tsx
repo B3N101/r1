@@ -112,11 +112,7 @@ export default function Footer() {
 					className={cn(
 						"text-sm text-gray-500 dark:text-gray-400 sm:text-center",
 					)}>
-					© 2023{" "}
-					<Link href="/" className={cn("hover:underline")}>
-						Middlesex Anvil™
-					</Link>
-					{"  "}All Rights Reserved.
+					© {new Date().getFullYear()} Middlesex Anvil™ All Rights Reserved.
 				</span>
 				<div className={cn("mt-4 flex space-x-6 sm:mt-0 sm:justify-center")}>
 					<a

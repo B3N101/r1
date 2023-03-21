@@ -25,7 +25,7 @@ export default function Highlighted({
 			<div
 				className={cn(
 					"grid grid-cols-1 justify-center gap-2 md:grid-cols-2",
-					"sm:gap-8",
+					"sm:gap-4",
 				)}>
 				{/* dim or darken background color on hover */}
 				<Link href={`posts/${url}`}>
@@ -35,17 +35,23 @@ export default function Highlighted({
 						)}>
 						<h1
 							className={cn(
-								"mb-4 font-bold hover:underline md:text-3xl",
-								"text-2xl",
-								"text-center",
+								"mb-3 font-bold hover:underline",
+								"text-xl",
 								"md:text-left",
 							)}>
 							{title}
 						</h1>
 						{/* Dissapears on mobile */}
-						<div className={cn("hidden md:block")}>
-							<p className={cn("text-base font-bold")}>{subtitle}</p>
-							<Link href={`writers/${removeWhitespace(author)}`} className={cn("text-gray-500", "dark:text-gray-300", "hover:text-blue-500")}>
+						<div className={cn("")}>
+							<p className={cn("text-base font-normal")}>{subtitle}</p>
+							<Link
+								href={`writers/${removeWhitespace(author)}`}
+								className={cn(
+									"text-gray-500",
+									"dark:text-gray-300",
+									"hover:text-blue-500",
+									"dark:hover:text-blue-500",
+								)}>
 								{author}
 							</Link>
 							<p className={cn("text-gray-500", "dark:text-gray-300")}>

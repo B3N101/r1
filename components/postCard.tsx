@@ -20,7 +20,7 @@ export default function PostCard({
 			<div className={cn("container mx-auto")}>
 				<div
 					className={cn(
-						"grid grid-cols-1 justify-center gap-8 md:grid-cols-2",
+						"grid grid-cols-1 justify-center gap-4 md:grid-cols-2",
 					)}>
 					<div
 						className={cn(
@@ -29,7 +29,7 @@ export default function PostCard({
 						<h1
 							className={cn(
 								"mb-4 font-bold hover:underline md:text-3xl",
-								"text-2xl",
+								"text-xl",
 								"text-center",
 								"md:text-left",
 							)}>
