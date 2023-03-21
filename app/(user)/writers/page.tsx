@@ -23,7 +23,7 @@ export default function Page() {
 			<ul>
 				{authors.map((author, index) => (
 					<li key={author} className={cn("text-lg")}>
-						<Link href={`/authors/${authorSlugs[index]}`}>{author}</Link>
+						<Link href={`/writers/${authorSlugs[index]}`}>{author}</Link>
 					</li>
 				))}
 			</ul>
