@@ -29,7 +29,7 @@ export default function Navbar() {
 							<ListItem href="/opinions" title="Opinions" />
 							<ListItem href="/ae" title="Arts & Entertainment" />
 							<ListItem href="/sports" title="Sports" />
-							<ListItem href={`/issue/${latestIssue}`} title="Latest Issue" />
+							<ListItem href={`/issues/${latestIssue}`} title="Latest Issue" />
 							<ListItem href="/writers" title="Writers" />
 						</ul>
 					</NavigationMenu.Content>
