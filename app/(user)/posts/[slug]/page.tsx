@@ -33,7 +33,7 @@ export default function Page({ params }) {
 					<p>{format(parseISO(post.date), "LLLL d, yyyy")}</p>
 					{/*<Link href={`${post.author}`}>{post.author}</Link>*/}
 					<Link
-						className={cn("hover:underline")}
+						className={cn("hover:underline text-sky-800 dark:text-sky-300")}
 						href={`../writers/${post.authorSlug}`}>
 						{post.author}
 					</Link>
