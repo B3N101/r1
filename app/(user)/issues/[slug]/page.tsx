@@ -17,7 +17,7 @@ export default function Page({ params }: PageProps) {
 	const posts = getPostsByTag(params.slug);
 	const tag = posts[0]?.tags[0] != null ? posts[0].tags[0] : "";
 	return (
-		<section>
+		<section className={cn("mx-auto max-w-5xl")}>
 			<h1 className="mb-5 p-4 font-serif text-3xl font-bold">
 				Articles from {tag}:
 			</h1>
@@ -31,7 +31,10 @@ export default function Page({ params }: PageProps) {
 				.map((post) => (
 					<div
 						key={post.url}
-						className="w-full rounded-xl border-2 border-current p-2 hover:underline">
+						className={cn(
+							"w-full rounded-xl border-2 border-current p-2 hover:underline",
+							post.image ? "grid grid-cols-2" : "",
+						)}>
 						<Link
 							className="mb-4 flex flex-col space-y-1"
 							href={`/posts/${post.url}`}>
@@ -54,7 +57,7 @@ export default function Page({ params }: PageProps) {
 									src={post.image}
 									alt={post.title}
 									width={500}
-									height={500}
+									height={400}
 								/>
 							</div>
 						)}

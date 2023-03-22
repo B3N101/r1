@@ -42,9 +42,7 @@ export default function Page() {
 				className={cn("grid max-w-4xl grid-cols-1 gap-1 md:grid-cols-2")}>
 				<div>
 					<h1 className={cn("mb-4 font-bold", "text-2xl")}>{headline.title}</h1>
-					<h2>
-						{headline.subtitle} - {headline.author}
-					</h2>
+					<h2>{headline.subtitle}</h2>
 				</div>
 				<Image
 					className={cn("mx-auto")}

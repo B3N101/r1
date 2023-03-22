@@ -10,7 +10,7 @@ function getPostsByCategory(category) {
 export default function Page() {
 	const posts = getPostsByCategory("News");
 	return (
-		<section>
+		<section className={cn("mx-auto max-w-5xl")}>
 			<h1 className="mb-5 font-serif text-3xl font-bold">News</h1>
 			{posts
 				.sort((a, b) => {
@@ -22,7 +22,10 @@ export default function Page() {
 				.map((post) => (
 					<div
 						key={post.url}
-						className="w-full rounded-xl border-2 border-current p-2 hover:underline">
+						className={cn(
+							"w-full rounded-xl border-2 border-current p-2 hover:underline",
+							post.image ? "grid grid-cols-2" : "",
+						)}>
 						<Link
 							className="mb-4 flex flex-col space-y-1"
 							href={`/posts/${post.url}`}>
@@ -45,7 +48,7 @@ export default function Page() {
 									src={post.image}
 									alt={post.title}
 									width={500}
-									height={500}
+									height={400}
 								/>
 							</div>
 						)}
