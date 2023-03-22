@@ -52,6 +52,7 @@ export default function Page() {
 					alt={headline.title}
 					width={400}
 					height={500}
+					priority
 				/>
 			</Link>
 
