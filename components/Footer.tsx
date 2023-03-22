@@ -45,16 +45,6 @@ export default function Footer() {
 									Sports
 								</Link>
 							</li>
-							<li className={cn("mb-4")}>
-								<Link href="/cartoons" className={cn("hover:underline")}>
-									Cartoons
-								</Link>
-							</li>
-							<li>
-								<a href="/videos" className={cn("hover:underline")}>
-									Videos
-								</a>
-							</li>
 						</ul>
 					</div>
 					<div>
@@ -81,19 +71,8 @@ export default function Footer() {
 								</Link>
 							</li>
 							<li className={cn("mb-4")}>
-								<Link href="/archives" className={cn("hover:underline")}>
-									Archives
-								</Link>
-							</li>
-
-							<li className={cn("mb-4")}>
 								<Link href="/privacy-policy" className={cn("hover:underline")}>
 									Privacy Policy
-								</Link>
-							</li>
-							<li>
-								<Link href="/mission" className={cn("hover:underline")}>
-									Mission
 								</Link>
 							</li>
 						</ul>
