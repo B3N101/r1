@@ -10,7 +10,7 @@ export default function Footer() {
 					<Link href="/" className={cn("flex items-center")}>
 						<span
 							className={cn(
-								"self-center whitespace-nowrap text-2xl font-black dark:text-white",
+								"self-center whitespace-nowrap text-2xl font-black dark:text-white hover:underline",
 							)}>
 							The Anvil
 						</span>
