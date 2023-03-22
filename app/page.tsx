@@ -155,24 +155,6 @@ export default function Page() {
 					</Link>
 				</div>
 			</div>
-
-			{/* <div className={cn("")}>
-				<h1 className={cn("mb-4 font-bold", "text-2xl", "text-center")}>
-					News:
-				</h1>
-				<div className={cn("grid md:grid-cols-2 lg:grid-cols-4")}>
-					{latestNews.map((post) => (
-						<PostCard
-							key={post._id}
-							title={post.title}
-							subtitle={post.subtitle}
-							author={post.author}
-							date={post.date}
-							url={post.url}
-						/>
-					))}
-				</div>
-			</div> */}
 		</div>
 	);
 }
