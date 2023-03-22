@@ -6,6 +6,7 @@ import Mdx from "@components/mdx";
 import { format, parseISO } from "date-fns";
 import Link from "next/link";
 import cn from "@lib/utils";
+import removeWhitespace from "@lib/whitespace";
 
 export async function generateStaticParams() {
 	return allPosts.map((post) => ({
@@ -44,6 +45,20 @@ export default function Page({ params }) {
 			{/* Horizontal rule */}
 			<div className="my-4 border-t border-neutral-200 dark:border-neutral-700" />
 			{<Mdx code={post.body.code} />}
+
+			{/* Bar at the bottom in which tags are displayed */}
+			<div className="mt-8 grid grid-cols-[auto_1fr_auto] items-center font-mono text-sm">
+				<div className="rounded-md bg-neutral-100 px-2 py-1 tracking-tighter dark:bg-neutral-800">
+					{post.tags.map((tag) => (
+						<Link
+							key={tag}
+							className={cn("text-sky-800 hover:underline dark:text-sky-300")}
+							href={`../issues/${removeWhitespace(tag.toLowerCase())}`}>
+							{tag}
+						</Link>
+					))}
+				</div>
+			</div>
 		</section>
 	);
 }
