@@ -4,16 +4,6 @@ import * as ToastPrimitives from "@radix-ui/react-toast";
 import { VariantProps, cva } from "class-variance-authority";
 import { X } from "lucide-react";
 import cn from "@/lib/utils";
-import {
-	NavigationMenu,
-	NavigationMenuContent,
-	NavigationMenuIndicator,
-	NavigationMenuItem,
-	NavigationMenuLink,
-	NavigationMenuList,
-	NavigationMenuTrigger,
-	NavigationMenuViewport,
-} from "@/components/ui/navigation-menu";
 
 const ToastProvider = ToastPrimitives.Provider;
 

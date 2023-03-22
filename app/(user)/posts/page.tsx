@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { allPosts } from "contentlayer/generated";
+import cn from "@lib/utils";
 
 export default function Page() {
 	return (
@@ -14,26 +15,35 @@ export default function Page() {
 					return 1;
 				})
 				.map((post) => (
-					<div key={post.url} className="border-4 border-current">
+					<div
+						key={post.url}
+						className="w-full rounded-xl border-2 border-current p-2 hover:underline">
 						<Link
 							className="mb-4 flex flex-col space-y-1"
 							href={`/posts/${post.url}`}>
 							<div className="flex w-full flex-col">
-								<p>{post.title}</p>
+								<p className={cn("text-base")}>{post.title}</p>
+								<p
+									className={cn(
+										"text-sm text-gray-500 decoration-gray-500 hover:underline",
+									)}>
+									{post.author}
+									<br />
+									{Math.ceil(post.readingTime.minutes)} min read
+								</p>
 							</div>
 						</Link>
-						<>
-							{post.image && (
-								<div className="object-contain">
-									<Image
-										src={post.image}
-										alt={post.title}
-										width={500}
-										height={500}
-									/>
-								</div>
-							)}
-						</>
+
+						{post.image && (
+							<div className="object-contain">
+								<Image
+									src={post.image}
+									alt={post.title}
+									width={500}
+									height={500}
+								/>
+							</div>
+						)}
 					</div>
 				))}
 		</section>

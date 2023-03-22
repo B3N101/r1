@@ -4,6 +4,8 @@ import { notFound } from "next/navigation";
 import Balancer from "react-wrap-balancer";
 import Mdx from "@components/mdx";
 import { format, parseISO } from "date-fns";
+import Link from "next/link";
+import cn from "@lib/utils";
 
 export async function generateStaticParams() {
 	return allPosts.map((post) => ({
@@ -30,7 +32,11 @@ export default function Page({ params }) {
 				<div className="rounded-md bg-neutral-100 px-2 py-1 tracking-tighter dark:bg-neutral-800">
 					<p>{format(parseISO(post.date), "LLLL d, yyyy")}</p>
 					{/*<Link href={`${post.author}`}>{post.author}</Link>*/}
-					<p>{post.author}</p>
+					<Link
+						className={cn("hover:underline")}
+						href={`../writers/${post.authorSlug}`}>
+						{post.author}
+					</Link>
 					<p>{Math.ceil(post.readingTime.minutes)} min read</p>
 				</div>
 				<div className="mx-2 h-[0.2em] bg-neutral-50 dark:bg-neutral-800" />

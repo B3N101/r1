@@ -4,7 +4,6 @@ import {
 	Check,
 	ChevronLeft,
 	ChevronRight,
-	Circle,
 	ClipboardCheck,
 	Copy,
 	CreditCard,

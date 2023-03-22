@@ -25,7 +25,12 @@ export default function CookieConsent() {
 				<span className="text-dark mr-16 text-base">
 					This website uses cookies to improve user experience. By using our
 					website you consent to all cookies in accordance with our{" "}
-					<Link href="/privacy-policy" className="underline text-blue-500 dark:text-blue-400"> Cookie Policy.</Link>
+					<Link
+						href="/privacy-policy"
+						className="text-blue-500 underline dark:text-blue-400">
+						{" "}
+						Cookie Policy.
+					</Link>
 				</span>
 				<button
 					className="rounded bg-green-500 py-2 px-8"

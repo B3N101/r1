@@ -31,14 +31,14 @@ export const AnvilStaff = {
 		"Noah Pavlov '23",
 		"Luca Raffa '24",
 	],
-	staff_photographers: [
-		"Leighton Glass '25",
-		"Jerry Li '25",
-		"Leo Vargas '23",
-	],
+	staff_photographers: ["Leighton Glass '25", "Jerry Li '25", "Leo Vargas '23"],
 	chief_illustrator: "Julie Chen '23",
-	staff_illustrators: ["Kiki Friedbauer '24", "Gretta Goorno '23", "Lindsay Hur '24"],
-	layout_editor: "Tem Taepaisitphongse '23"
+	staff_illustrators: [
+		"Kiki Friedbauer '24",
+		"Gretta Goorno '23",
+		"Lindsay Hur '24",
+	],
+	layout_editor: "Tem Taepaisitphongse '23",
 };
 
 export const ContactInfo = {

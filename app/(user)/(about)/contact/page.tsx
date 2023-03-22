@@ -9,7 +9,14 @@ export default function Page() {
 				<h1 className={cn("text-4xl italic")}>Contact</h1>
 				<p className={cn("mt-4 text-lg")}>
 					Questions? <br /> Comments? <br /> Concerns? <br />
-					<br /> Email us at <a target="_black" className={cn("text-blue-500 ")} href={`mailto:${ContactInfo.email}`}>{ContactInfo.email}</a>.
+					<br /> Email us at{" "}
+					<a
+						target="_black"
+						className={cn("text-blue-500 ")}
+						href={`mailto:${ContactInfo.email}`}>
+						{ContactInfo.email}
+					</a>
+					.
 				</p>
 			</Balancer>
 		</div>

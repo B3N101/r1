@@ -36,8 +36,10 @@ export default function Page() {
 	const headline = allPosts.find((post) => post.headline);
 
 	return (
-		<div className="mt-6 grid grid-cols-1 gap-6 lg:grid-cols-2 xl:gap-10">
-			<div className={cn("grid max-w-4xl grid-cols-1 gap-1 md:grid-cols-2")}>
+		<div className="grid grid-cols-1 gap-6 p-4 lg:grid-cols-2 xl:gap-10">
+			<Link
+				href={`posts/${headline.url}`}
+				className={cn("grid max-w-4xl grid-cols-1 gap-1 md:grid-cols-2")}>
 				<div>
 					<h1 className={cn("mb-4 font-bold", "text-2xl")}>{headline.title}</h1>
 					<h2>
@@ -45,12 +47,13 @@ export default function Page() {
 					</h2>
 				</div>
 				<Image
+					className={cn("mx-auto")}
 					src={headline.image}
 					alt={headline.title}
 					width={400}
 					height={500}
 				/>
-			</div>
+			</Link>
 
 			<div id="news">
 				<h1 className={cn("mb-4 text-2xl font-semibold")}>News:</h1>

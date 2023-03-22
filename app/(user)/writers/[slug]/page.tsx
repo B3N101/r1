@@ -6,7 +6,6 @@ function getPostsByAuthor(slug) {
 	return allPosts.filter((post) => post.authorSlugs.includes(slug));
 }
 
-
 interface PageProps {
 	params: {
 		slug: string;
