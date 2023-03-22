@@ -14,7 +14,7 @@ interface PageProps {
 
 export default function Page({ params }: PageProps) {
 	const posts = getPostsByTag(params.slug);
-	const tag = posts[0].tags[0];
+	const tag = posts[0]?.tags[0] != null ? posts[0].tags[0] : "";
 	return (
 		<section> 
 			<h1 className="mb-5 font-serif text-3xl font-bold">Articles from {tag}:</h1>
