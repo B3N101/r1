@@ -12,7 +12,7 @@ export default function CookieConsent() {
 
 	const acceptCookie = () => {
 		setShowConsent(true);
-		setCookie("localConsent", "true", {});
+		setCookie("localConsent", "true", {maxAge: 60 * 60 * 24 * 365});
 	};
 
 	if (showConsent) {
