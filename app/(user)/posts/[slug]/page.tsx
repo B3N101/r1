@@ -40,11 +40,12 @@ export default function Page({ params }) {
 					</Link>
 					<p>{Math.ceil(post.readingTime.minutes)} min read</p>
 				</div>
-				<div className="mx-2 h-[0.2em] bg-neutral-50 dark:bg-neutral-800" />
 			</div>
+
 			{/* Horizontal rule */}
 			<div className="my-4 border-t border-neutral-200 dark:border-neutral-700" />
-			{<Mdx code={post.body.code} />}
+			
+			<Mdx code={post.body.code} />
 
 			{/* Bar at the bottom in which tags are displayed */}
 			<div className="mt-8 grid grid-cols-[auto_1fr_auto] items-center font-mono text-sm">
