@@ -33,6 +33,15 @@ const latestArts = getLatestPostsByCategory("Arts & Entertainment");
 // const pageSize = 10;
 
 export default function Page() {
+	allPosts.sort((a, b) => {
+		if (a.date > b.date) {
+			return -1;
+		} else if (a.date < b.date) {
+			return 1;
+		} else {
+			return 0;
+		}
+	});
 	const headline = allPosts.find((post) => post.headline);
 
 	return (
