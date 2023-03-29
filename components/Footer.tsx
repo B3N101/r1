@@ -4,13 +4,16 @@ import { SocialLinks } from "@/config";
 
 export default function Footer() {
 	return (
-		<footer className={cn("bottom mt-4 border-t-2 border-current sm:p-6")}>
+		<footer
+			className={cn(
+				"bottom mt-4 mb-4 border-t-2 border-current sm:mb-0 sm:p-6",
+			)}>
 			<div className={cn("md:flex md:justify-between")}>
 				<div className={cn("mb-6 md:mb-0")}>
 					<Link href="/" className={cn("flex items-center")}>
 						<span
 							className={cn(
-								"self-center whitespace-nowrap text-2xl font-black dark:text-white hover:underline",
+								"self-center whitespace-nowrap text-2xl font-black hover:underline dark:text-white",
 							)}>
 							The Anvil
 						</span>
@@ -86,8 +89,11 @@ export default function Footer() {
 				)}
 			/>
 
-			<div className={cn(/*make div center when small*/ 
-				"flex flex-col items-center justify-between sm:flex-row")}>
+			<div
+				className={cn(
+					/*make div center when small*/
+					"flex flex-col items-center justify-between sm:flex-row",
+				)}>
 				<span
 					className={cn(
 						"text-sm text-gray-500 dark:text-gray-400 sm:text-center",
