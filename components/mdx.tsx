@@ -43,7 +43,7 @@ function Picture({ src, alt, height, width, caption }: PictureProps) {
 export default function Mdx({ code }: Props) {
 	const MDXContent = useMDXComponent(code);
 	return (
-		<section className={cn("prose", "dark:prose-invert")}>
+		<section className={cn("prose prose-lg", "dark:prose-invert")}>
 			<MDXContent components={{ Link, Image, Picture }} />
 		</section>
 	);
